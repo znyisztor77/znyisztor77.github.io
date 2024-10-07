@@ -1,7 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alap html elrendezés</title>
+    <style>
+        body{
+            background-color: black;            
+        }
+        header {
+            padding: 5px;
+        grid-area: header;
+        }
+        main {
+            padding: 5px;
+        grid-area: main;
+        }
+        footer {
+            padding: 5px;
+        grid-area: footer;
+        }
+        .left-aside {
+            padding: 5px;
+        grid-area: left-aside;
+        }
+        .right-aside {
+            padding: 5px;
+        grid-area: right-aside;
+        }
+        .banner{
+            padding: 5px;
+            grid-area: banner;
+        }
+        .low-content{
+            padding: 5px;
+            grid-area: low-content;
+        }
+        .container{
+            display: grid;
+            grid-template-rows: 80px auto 1fr auto 50px;
+            grid-template-columns: 1fr 4fr 1fr;
+            height: 100vh;
+            grid-template-areas: 
+                    "header         header          header"
+                    "left-aside     banner          right-aside"
+                    "left-aside     main            right-aside"
+                    "left-aside     low-content     right-aside"
+                    "footer         footer          footer";
+            grid-gap: 15px;
+            padding: 10px;
+            font-weight: 600;  
+            font-size: 20px; 
+              
+        }
+        @media(max-width:670px){
+            .container{
+                grid-template-rows: 50px 1fr 50px 1fr 50px 1fr 50px;
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                    "header"
+                    "banner"
+                    "left-aside"
+                    "main"
+                    "right-aside"
+                    "low-content"
+                    "footer";
+            }
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <div class="container">
+
+        <header style="border: 1px solid rgb(4, 0, 255); color: rgb(209, 141, 52);box-shadow: 0 0 10px 5px #48abe0;">Header</header>
+        <aside class="left-aside" style="border: 1px solid rgb(204, 0, 255);  color: rgb(255, 255, 255);">Left_Asside</aside>
+        <section class="banner" style="border: 1px solid rgb(238, 131, 31);  color: rgb(255, 255, 255);"">Banner Lorem ipsum dolor sit amet consectetur adipisicing elit. A sed esse odio ratione delectus nihil aliquid! Iure quam exercitationem vel cum fugit magni fugiat, impedit eius! Optio explicabo commodi consequatur?
+        Neque facere sint laudantium, recusandae possimus aliquid eveniet numquam optio provident, perspiciatis laboriosam odio consequatur culpa inventore! Beatae laboriosam voluptatibus atque omnis labore, voluptates quaerat assumenda obcaecati aliquam, blanditiis nihil.
+        Debitis illo reiciendis laudantium aspernatur, aliquid asperiores, officia quaerat consequatur autem non labore quisquam natus possimus! Magni placeat quia eius aut facere exercitationem natus accusantium quasi. Fugit sit harum corrupti.
+        Nesciunt quasi veniam soluta velit, exercitationem maxime illum repudiandae. Praesentium iusto ipsam illum, incidunt numquam id velit. Nobis recusandae tempora adipisci sapiente non, quo saepe quas eligendi assumenda atque magnam?
+        Earum voluptatum amet nisi dolorem deleniti numquam temporibus praesentium rerum accusamus pariatur, voluptas officiis, nulla ab doloribus nemo est minus perferendis sit fugiat! Laboriosam, tenetur. Debitis consequatur reprehenderit maxime quam?</section>
+        <main style="border: 1px solid rgb(3, 103, 170);  color: rgb(255, 255, 255);">Main Content 
+            <pre id="text">
+                <code>
+                   
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt
+                        &lt;meta name="viewport" content="width=, initial-scale=1.0"&gt;
+                        &lt;title&gt;znyisztor.github.io&lt/title&gt;
+                        &lt;link rel="stylesheet" href="style.css"&gt;
+                    &lt;/head&gt;
+                </code> 
+                          
+            </pre> 
+
+
+            
+        </main>
+        <aside class="right-aside" style="border: 1px solid rgb(204, 0, 255);  color: rgb(255, 255, 255);">Right Asside</aside>
+        <section  class="low-content" style="border: 1px solid rgb(170, 3, 3);  color: rgb(255, 255, 255);">Low Content Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente iste at nemo nulla aperiam minus blanditiis odio sint a nam necessitatibus, neque corrupti quis velit dolorum harum ea quisquam tempora!
+        Tenetur optio illo architecto adipisci sapiente recusandae iusto dicta incidunt eos unde reprehenderit, ea odio voluptatibus facere nisi ex possimus harum. Sint laborum, modi explicabo soluta similique labore? Perferendis, vitae.
+        Nihil eligendi ipsum eos illum dignissimos sit cupiditate sequi, nam reprehenderit? Maiores reprehenderit illum, laboriosam explicabo quas quos, ex eos magni error ipsam, laudantium voluptatibus magnam dignissimos in aliquam voluptatum?</section>
+        <footer style="border: 1px solid rgb(9, 170, 3);  color: rgb(255, 255, 255);">Footer</footer>
+    </div>
+   
+
 </body>
 </html>
