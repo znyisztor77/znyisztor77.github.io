@@ -1,0 +1,114 @@
+body{
+    background-color: black; 
+    margin: 0;
+    width: 100vw;
+    min-height: 100vh;
+   
+    
+      
+}
+.container{
+    
+    margin: auto;
+    display: grid;    
+    grid-template-rows: 50px auto 1fr aut 80px;
+    grid-template-columns: 1fr 8fr 1fr;
+    height: 100vh;
+    
+    grid-template-areas: 
+            "header         header          header"
+            "left-aside     banner          right-aside"
+            "left-aside     main            right-aside"
+            "left-aside     low-content     right-aside"
+            "footer         footer          footer";
+    grid-gap: 15px;
+    padding: 10px;
+}
+header {
+    padding: 5px;
+    grid-area: header;
+    border: 1px solid rgb(4, 0, 255); 
+    color: rgb(209, 141, 52);
+    box-shadow: 0 0 10px 5px #48abe0;
+}
+header ul{
+    list-style-type: none;
+    margin: 0;
+}
+header li{
+    display: inline-block;
+    /*height: 40px;*/
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+header li:hover{
+    border-radius: 5px;
+    box-shadow: 0 0 10px 5px #48abe0;
+}
+a:link, a:visited, a:active{
+    color: white;
+    text-decoration: none;
+}
+.banner{
+    justify-content: center;
+    padding: 5px;
+    grid-area: banner;
+    border: 1px solid rgb(238, 131, 31);
+    color: rgb(255, 255, 255);
+}
+main {
+    padding: 5px;
+    grid-area: main;
+    border: 1px solid rgb(3, 103, 170);
+    color: rgb(255, 255, 255);
+}
+.low-content{
+    padding: 5px;
+    grid-area: low-content;
+    border: 1px solid rgb(170, 3, 3);
+    color: rgb(255, 255, 255);
+}
+.left-aside {
+        padding: 5px;
+        grid-area: left-aside;  
+        border: 1px solid rgb(204, 0, 255); 
+        color: rgb(255, 255, 255);
+    
+}
+.right-aside {
+        padding: 5px;
+        grid-area: right-aside;
+        border: 1px solid rgb(204, 0, 255);
+        color: rgb(255, 255, 255);
+}
+footer {
+    padding: 5px;
+    grid-area: footer;
+    border: 1px solid rgb(9, 170, 3);
+    color: rgb(255, 255, 255);
+}
+
+@media(max-width:640px){
+    .container{
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header"
+            "banner"
+            "left-aside"
+            "main"
+            "right-aside"
+            "low-content"
+            "footer";
+    }
+}
+
+
+span{
+    color: aqua;
+}
+
+
+  
