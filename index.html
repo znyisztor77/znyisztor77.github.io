@@ -8,24 +8,63 @@
     </head>
 <body>
     <div class="container">
-
+        <!--Header-->
         <header><span>Header</span>
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Link</a></li>
             <li><a href="#">Contact</a></li>
         </ul></header>
-        <aside class="left-aside"><Span>Left Asside</Span>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente totam ab excepturi, dolore cumque, tenetur fugiat tempore sit minima veniam deleniti veritatis itaque earum quae est eligendi sequi harum ducimus.</aside>
-        <section class="banner"><span>Banner</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. A sed esse odio ratione delectus nihil aliquid! Iure quam exercitationem vel cum fugit magni fugiat, impedit eius! Optio explicabo commodi consequatur?
-        Neque facere sint laudantium, recusandae possimus aliquid eveniet numquam optio provident, perspiciatis laboriosam odio consequatur culpa inventore! Beatae laboriosam voluptatibus atque omnis labore, voluptates quaerat assumenda obcaecati aliquam, blanditiis nihil.
-        Debitis illo reiciendis laudantium aspernatur, aliquid asperiores, officia quaerat consequatur autem non labore quisquam natus possimus! Magni placeat quia eius aut facere exercitationem natus accusantium quasi. Fugit sit harum corrupti.
-        Nesciunt quasi veniam soluta velit, exercitationem maxime illum repudiandae. Praesentium iusto ipsam illum, incidunt numquam id velit. Nobis recusandae tempora adipisci sapiente non, quo saepe quas eligendi assumenda atque magnam?
-        Earum voluptatum amet nisi dolorem deleniti numquam temporibus praesentium rerum accusamus pariatur, voluptas officiis, nulla ab doloribus nemo est minus perferendis sit fugiat! Laboriosam, tenetur. Debitis consequatur reprehenderit maxime quam?</section>
+        <!--Left Aside-->
+        <aside class="left-aside"><Span>Left Aside</Span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente totam ab excepturi, dolore cumque, tenetur fugiat tempore sit minima veniam deleniti veritatis itaque earum quae est eligendi sequi harum ducimus.</aside>
+        <!--Banner-->
+        <section class="banner">
+            <details>
+                <summary>Read more</summary>
+                    <span>Banner</span>
+                        </p> Lorem ipsum dolor sit amet consectetur adipisicing elit. A sed esse odio ratione delectus nihil aliquid! Iure quam exercitationem vel cum fugit magni fugiat, impedit eius! Optio explicabo commodi consequatur?
+                        Neque facere sint laudantium, recusandae possimus aliquid eveniet numquam optio provident, perspiciatis laboriosam odio consequatur culpa inventore! Beatae laboriosam voluptatibus atque omnis labore, voluptates quaerat assumenda obcaecati aliquam, blanditiis nihil.
+                        Debitis illo reiciendis laudantium aspernatur, aliquid asperiores, officia quaerat consequatur autem non labore quisquam natus possimus! Magni placeat quia eius aut facere exercitationem natus accusantium quasi. Fugit sit harum corrupti.
+                        Nesciunt quasi veniam soluta velit, exercitationem maxime illum repudiandae. Praesentium iusto ipsam illum, incidunt numquam id velit. Nobis recusandae tempora adipisci sapiente non, quo saepe quas eligendi assumenda atque magnam?
+                        Earum voluptatum amet nisi dolorem deleniti numquam temporibus praesentium rerum accusamus pariatur, voluptas officiis, nulla ab doloribus nemo est minus perferendis sit fugiat! Laboriosam, tenetur. Debitis consequatur reprehenderit maxime quam?
+                        <p>           
+            </details>
+            <details>               
+                <summary>C# Adatok kiírása (Console)</summary>
+                    <span>Banner</span>
+                    <p>C# konzolos programban az adatok kiírásának leheteőségei.</p>
+                        <textarea cols="50" rows="20">
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Gyakorlas
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string a = "Hello";
+            string b = "World";
+
+            Console.WriteLine("Hello World!");
+            Console.WriteLine(a+" "+b+"!");
+            Console.WriteLine("{0} {1}!",a, b);
+            Console.WriteLine($"{a} {b}!");
+            Console.ReadKey();
+        }
+    }
+}
+                        </textarea> 
+            </details>
+        
+        </section>
+        <!--Main Content-->
         <main><span>Main Content </span>
-            <pre id="text">
-<code>
-                   
+           <pre id="text">
+                <code>                   
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
@@ -34,21 +73,22 @@
     <a href="https://znyisztor77.github.io/">&lt;title&gt;Link->znyisztor77.github.io&lt/title&gt;</a>
     <a href="https://github.com/znyisztor77">&lt;title&gt;znyisztor77 Repositori&lt/title&gt;</a>
     &lt;link rel="stylesheet" href="style.css"&gt;
-&lt;/head&gt;
-</code> 
-                          
-            </pre> 
-
-
-            
+&lt;/head&gt;</code> <pre>             
         </main>
-        <aside class="right-aside"><span>Right Asside</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, quos? Omnis aut itaque eveniet placeat inventore saepe voluptatem. Numquam nihil repellendus recusandae eius consequatur adipisci minima. Autem consectetur eius iste!</aside>
-        <section  class="low-content"><span>Low Content</span>   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente iste at nemo nulla aperiam minus blanditiis odio sint a nam necessitatibus, neque corrupti quis velit dolorum harum ea quisquam tempora!
+        <!--Right Aside-->
+        <aside class="right-aside"><span>Right Aside</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, quos? Omnis aut itaque eveniet placeat inventore saepe voluptatem. Numquam nihil repellendus recusandae eius consequatur adipisci minima. Autem consectetur eius iste!
+        </aside>
+        <!--Low Content-->
+        <section  class="low-content"><span>Low Content</span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente iste at nemo nulla aperiam minus blanditiis odio sint a nam necessitatibus, neque corrupti quis velit dolorum harum ea quisquam tempora!
         Tenetur optio illo architecto adipisci sapiente recusandae iusto dicta incidunt eos unde reprehenderit, ea odio voluptatibus facere nisi ex possimus harum. Sint laborum, modi explicabo soluta similique labore? Perferendis, vitae.
-        Nihil eligendi ipsum eos illum dignissimos sit cupiditate sequi, nam reprehenderit? Maiores reprehenderit illum, laboriosam explicabo quas quos, ex eos magni error ipsam, laudantium voluptatibus magnam dignissimos in aliquam voluptatum?</section>
-        <footer><span>Footer</span>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ex maiores dignissimos iusto perspiciatis nulla accusamus cupiditate odio quis sequi eos accusantium explicabo assumenda illum, tempora incidunt velit laboriosam unde! </footer>
+        Nihil eligendi ipsum eos illum dignissimos sit cupiditate sequi, nam reprehenderit? Maiores reprehenderit illum, laboriosam explicabo quas quos, ex eos magni error ipsam, laudantium voluptatibus magnam dignissimos in aliquam voluptatum?
+        
+        </section>
+        <!--Footer-->
+        <footer><span> <a href="https://www.1kbyte.hu">"https://www.1kbyte.hu"</a></span>  
+        </footer>
     </div>
    
-
+<script src="scripts/script.js"></script>
 </body>
 </html>
