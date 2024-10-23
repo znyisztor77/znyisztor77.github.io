@@ -3,13 +3,13 @@
     src: url(fonts/Inconsolata-VariableFont_wdth\,wght.ttf);
 }
 body{
-    background-color: black;
     margin: 0;
-    color: white;
-    /*background-color: #444444;
-    background-image: url(images/background.jpg);
-    background-repeat: repeat;*/
     font-family: sajat;
+    background-color: black;
+    /*background-image: url(images/vecteezy_ocyber-network-protection-future-technology-background_.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;*/
+    color: whitesmoke;   
     font-size: 1.0rem;
 }
 .container{
@@ -30,11 +30,12 @@ body{
 header {
     padding: 5px;
     grid-area: header;
-    border: 1px solid rgb(250, 250, 250); 
+    border: 1px solid rgb(85, 114, 243); 
     border-radius: 5px;
-    box-shadow: 5px 2px 7px 2px #585858;       
+    box-shadow: 5px 2px 7px 2px #6275c7bd;       
     display: flex;
-    justify-content: start;
+    flex-direction: row;
+    
 }
 header span{
     display: flex;
@@ -46,7 +47,6 @@ header ul{
 }
 header li{
     display: inline-block;
-    /*height: 40px;*/
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -63,51 +63,44 @@ a:link, a:visited, a:active{
     justify-content: center;
     padding: 5px;
     grid-area: banner;
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid rgba(255, 251, 1, 0.568);
     border-radius: 5px;
-    /*color: rgb(255, 255, 255);*/
-    /*color: grey;*/
-    box-shadow: 5px 3px 7px 2px #585858;        
-    backdrop-filter: blur(1px);
+    /*box-shadow: 5px 3px 7px 2px #4e4e4e; */       
 }
-main{
-    
+main{    
     padding: 5px;
     grid-area: main;
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid rgba(76, 161, 240, 0.507);
     border-radius: 5px;
-    box-shadow: 5px 3px 7px 2px #313131; 
-    background-image: url(images/aramkor.jpeg);
-    
-    
+    /*box-shadow: 5px 3px 7px 2px #313131; */
 }  
 .left-aside {
     padding: 5px;
     grid-area: left-aside;  
-    border: 1px solid rgb(255, 255, 255); 
+    border: 1px solid rgba(27, 240, 38, 0.5); 
     border-radius: 5px;
-    box-shadow: 5px 3px 7px 2px #585858;   
+    /*box-shadow: 5px 3px 7px 2px #585858;*/   
 }
 .right-aside {
     padding: 5px;
     grid-area: right-aside;
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid rgba(222, 41, 228, 0.507);
     border-radius: 5px;
-    box-shadow: 5px 3px 7px 2px #585858;
+    /*box-shadow: 5px 3px 7px 2px #585858;*/
 }
 .low-content{
     padding: 5px;
     grid-area: low-content;
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid rgba(226, 22, 124, 0.541);
     border-radius: 5px;
-    box-shadow: 5px 3px 7px 2px #585858;       
+    /*box-shadow: 5px 3px 7px 2px #585858; */      
 }
 footer {
     padding: 5px;
     grid-area: footer;
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid rgba(52, 127, 226, 0.596);
     border-radius: 5px;
-    box-shadow: 5px 3px 7px 2px #585858; 
+    /*box-shadow: 5px 3px 7px 2px #585858;*/ 
     text-align: center;      
 }
 @media(max-width:580px){
@@ -124,9 +117,12 @@ footer {
             "low-content"
             "footer";
     }
+    header{
+        flex-direction: column;
+    }
 }
 span{
-    color: rgb(64, 74, 165);
+    color: rgb(92, 105, 223);
 }
 /*pre tag törés*/
 pre {
@@ -141,7 +137,7 @@ img{
     opacity: 50%;
 }
 textarea{
-    background-color: black;
+    background-color: none;
     color: white;
     float: left;
     width: 100%;
