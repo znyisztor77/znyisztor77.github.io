@@ -1,6 +1,6 @@
 @font-face {
     font-family: sajat;
-    src: url(fonts/Inconsolata-VariableFont_wdth\,wght.ttf);
+    src: url(fonts/good\ times\ rg.ttf);
 }
 body{
     margin: 0;
@@ -11,7 +11,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;*/
     color: whitesmoke;   
-    font-size: 1.1rem;
+    font-size: 1rem;
     display: flex;
 }
 .container{
