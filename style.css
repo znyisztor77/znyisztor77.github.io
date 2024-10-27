@@ -4,20 +4,23 @@
 }
 body{
     margin: 0;
+    min-height: 100vh;
     font-family: sajat;
     background-color: black;
     /*background-image: url(images/vecteezy_ocyber-network-protection-future-technology-background_.jpg);
     background-repeat: no-repeat;
     background-size: cover;*/
     color: whitesmoke;   
-    font-size: 1.0rem;
+    font-size: 1.1rem;
+    display: flex;
 }
 .container{
     margin: auto;
     display: grid;    
     grid-template-rows: 50px auto 1fr auto 80px;
     grid-template-columns: 1fr 8fr 1fr;
-    height: 100svh;  
+    height: 98svh;  
+    max-width: 99%;
     grid-template-areas: 
             "header         header          header"
             "left-aside     banner          right-aside"
@@ -25,7 +28,7 @@ body{
             "left-aside     low-content     right-aside"
             "footer         footer          footer";
     grid-gap: 15px;
-    padding: 10px;
+    
 }
 header {
     padding: 5px;
