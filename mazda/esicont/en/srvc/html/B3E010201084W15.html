@@ -1,0 +1,980 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher Professional Edition 7.0.2.1206">
+    <meta name="TEMPLATEBASE" content="Simple HTML">
+    <meta name="LASTUPDATED" content="09/29/03 15:36:15">
+    <title>DTC P0121 [LF]</title>
+  </head>
+
+  <body link="#3366CC" vlink="#9999CC" text="#000000" alink="#0000CC" bgcolor="#FFFFFF">
+<a name="wp1025486"> </a><h1><div align="center"><font color="Black" face="Arial, Helvetica, sans-serif" size="5"><b>
+DTC P0121 [LF]
+</b></font></div></h1>
+<hr>
+
+<a name="wp1058563"> </a><p><div align="right"><font color="#000000" face="Arial" size="2">
+B3E010201084W15
+</font></div></p>
+
+<a name="wp1062073"> </a><p><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+</font></p><div align="left">
+<table border="1">
+  <caption></caption>
+  <tr align="center">    <th>
+<a name="wp1058624"> </a><p><div align="center"><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+DTC P0121
+</b></font></div></p>
+</th>
+    <th>
+<a name="wp1058626"> </a><p><div align="center"><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+TP sensor stuck closed
+</b></font></div></p>
+</th>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1058566"> </a><p><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+<b>DETECTION CONDITION</b>
+</font></p>
+</td>
+    <td>
+<a name="wp1058701"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;If the PCM detects that the throttle valve opening angle is <b>below 12.5% </b>for <b>5 s</b> after following conditions are met, the PCM determines that the TP is stuck closed: 
+</font></div>
+
+<a name="wp1058710"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+MONITORING CONDITION
+</b></font>
+<dl>
+<a name="wp1058720"> </a><dd><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+-	Engine coolant temperature is <b>above 70 </b>&deg;<b>C {158 </b>&deg;<b>F}</b>.
+</font></dd>
+
+<a name="wp1058746"> </a><dd><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+-	MAF sensor signal is <b>above 32.0 g/s {4.2 lb/min.}</b>.
+</font></dd>
+</dl>
+<a name="wp1058797"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;If PCM detects that throttle valve opening angle is <b>above 50%</b> for <b>5 s</b> after following conditions are met, the PCM determines that TP is stuck open: 
+</font></div>
+
+<a name="wp1058806"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+MONITORING CONDITION
+</b></font>
+<dl>
+<a name="wp1058816"> </a><dd><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+-	Engine speed <b>above 500 rpm</b>
+</font></dd>
+
+<a name="wp1058832"> </a><dd><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+-	MAF sensor signal <b>below 5 g/s {0.7 lb/min.}</b>
+</font></dd>
+</dl>
+<a name="wp1058855"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+Diagnostic support note
+</b></font>
+
+<a name="wp1058865"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;This is a continuous monitor (CCM).
+</font></div>
+
+<a name="wp1058875"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;MIL illuminates if PCM detects the above malfunction condition in two consecutive drive cycles or in one drive cycle while the DTC for the same malfunction has been stored in the PCM.
+</font></div>
+
+<a name="wp1058885"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;PENDING CODE is available if PCM detects the above malfunction condition.
+</font></div>
+
+<a name="wp1058895"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;FREEZE FRAME DATA is available.
+</font></div>
+
+<a name="wp1058905"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;DTC is stored in the PCM memory.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1058641"> </a><p><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+<b>POSSIBLE CAUSE</b>
+</font></p>
+</td>
+    <td>
+<a name="wp1058644"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;TP sensor malfunction
+</font></div>
+
+<a name="wp1058937"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Electrical corrosion in TP signal circuit
+</font></div>
+
+<a name="wp1058947"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Voltage drop in constant voltage supply circuit
+</font></div>
+
+<a name="wp1058957"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Voltage drop in ground circuit
+</font></div>
+
+<a name="wp1058967"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;MAF sensor malfunction
+</font></div>
+
+<a name="wp1058977"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;PCM malfunction
+</font></div>
+</td>
+</tr>
+</table>
+</div>
+<p><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+</font></p>
+
+<a name="wp1059011"> </a><p><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+Diagnostic procedure</b></font></p><div align="left">
+<table border="1">
+  <caption></caption>
+  <tr align="center">    <th>
+<a name="wp1059125"> </a><p><div align="center"><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+STEP
+</b></font></div></p>
+</th>
+    <th colspan="2" rowspan="1">
+<a name="wp1059127"> </a><p><div align="center"><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+INSPECTION
+</b></font></div></p>
+</th>
+    <th>
+<a name="wp1059131"> </a><p><div align="center"><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+ACTION
+</b></font></div></p>
+</th>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1059019"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+1
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1059021"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+VERIFY FREEZE FRAME DATA HAS BEEN RECORDED
+</b></font>
+
+<a name="wp1059233"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Has FREEZE FRAME DATA been recorded?
+</font></div>
+</td>
+    <td>
+<a name="wp1059077"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1059080"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1059160"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1059163"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Record the FREEZE FRAME DATA on repair order, then go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1059167"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+2
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1059170"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+VERIFY RELATED PENDING CODE OR STORED DTC
+</b></font>
+
+<a name="wp1059277"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Turn the ignition switch to the ON position (Engine off).
+</font></div>
+
+<a name="wp1059291"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Retrieve the pending or stored DTC using the WDS or equivalent.
+</font></div>
+
+<a name="wp1059301"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is DTC P0101 also retrieved?
+</font></div>
+</td>
+    <td>
+<a name="wp1059173"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1059176"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to DTC P0101 troubleshooting procedure.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1059186"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1059189"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1059193"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+3
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1059196"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+VERIFY RELATED REPAIR INFORMATION AVAILABILITY
+</b></font>
+
+<a name="wp1059354"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Verify related service repair information availability.
+</font></div>
+
+<a name="wp1059368"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is any related repair information available?
+</font></div>
+</td>
+    <td>
+<a name="wp1059199"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1059202"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Perform repair or diagnosis according to available repair information.
+</font></div>
+
+<a name="wp1059388"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;If vehicle is not repaired, go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1059335"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1059338"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1059410"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+4
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1059413"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+VERIFY CURRENT INPUT SIGNAL STATUS: IS CONCERN INTERMITTENT OR CONSTANT?
+</b></font>
+
+<a name="wp1059448"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Start the engine.
+</font></div>
+
+<a name="wp1059462"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Access ECT, TP and MAF PIDs using the WDS or equivalent.
+</font></div>
+
+<a name="wp1059472"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Warm up the engine until ECT PID is <b>above 70 </b>&deg;<b>C {158 </b>&deg;<b>F}</b>
+</font></div>
+
+<a name="wp1059495"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Drive the vehicle.
+</font></div>
+
+<a name="wp1059505"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Read TP PID while MAF PID is <b>above 32.0 g/s {4.2 lb/min.}</b>.
+</font></div>
+
+<a name="wp1059531"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is TP PID <b>above 12.5%</b>?
+</font></div>
+</td>
+    <td>
+<a name="wp1059416"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1059419"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to Step 7.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1059429"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1059432"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1059569"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+5
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1059572"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+VERIFY TP PID
+</b></font>
+
+<a name="wp1059627"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Start the engine.
+</font></div>
+
+<a name="wp1059641"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Access TP, MAF and RPM PIDs using the WDS or equivalent.
+</font></div>
+
+<a name="wp1059678"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Read TP PID while MAF PID is <b>below 5 g/s {0.7 lb/min}</b> and RPM PID is <b>above 500 rpm</b>.
+</font></div>
+
+<a name="wp1059687"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is TP PID <b>above 50%</b>?
+</font></div>
+</td>
+    <td>
+<a name="wp1059575"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1059578"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to Step 12.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1059593"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1059596"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1059725"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+6
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1059728"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+VERIFY CURRENT INPUT SIGNAL STATUS: IS CONCERN INTERMITTENT OR CONSTANT?
+</b></font>
+
+<a name="wp1059803"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Drive the vehicle and read MAF PID.
+</font></div>
+
+<a name="wp1059817"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Does MAF PID change according to driving condition?
+</font></div>
+</td>
+    <td>
+<a name="wp1059731"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1059734"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Intermittent concern exists. Go to INTERMITTENT CONCERNS troubleshooting procedure.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1059754"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1059757"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Inspect the mass airflow sensor, elated circuits and terminals.
+</font></div>
+
+<a name="wp1059847"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+ (See <a  href="B3E014013210W01.html#wp1025486">MASS AIR FLOW (MAF) SENSOR INSPECTION [LF]</a>.)
+</font></div>
+
+<a name="wp1059861"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Repair or replace if necessary, then go to Step 16.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1059865"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+7
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1059868"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+INSPECT TP SENSOR TERMINALS FOR ELECTRICAL CORROSION
+</b></font>
+
+<a name="wp1059951"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Turn the ignition switch off.
+</font></div>
+
+<a name="wp1059965"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Disconnect the TP sensor connector. 
+</font></div>
+
+<a name="wp1059975"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Inspect male and female the TP sensor terminals for electrical corrosion.
+</font></div>
+
+<a name="wp1059985"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is any electrical corrosion found?
+</font></div>
+</td>
+    <td>
+<a name="wp1059871"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1059874"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Repair or replace the terminal or TP sensor, then go to Step 11.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1059896"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1059899"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1060013"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+8
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1060016"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+VERIFY TP SENSOR
+</b></font>
+
+<a name="wp1060099"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Does the TP sensor resistance smoothly change while gradually opening throttle valve?
+</font></div>
+</td>
+    <td>
+<a name="wp1060019"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1060022"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1060044"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1060047"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Replace the TP sensor, then go to Step 11.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1060131"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+9
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1060134"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+INSPECT PCM TERMINALS FOR ELECTRICAL CORROSION
+</b></font>
+
+<a name="wp1060217"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Disconnect the PCM connector.
+</font></div>
+
+<a name="wp1060231"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Inspect the PCM male and female terminals for electrical corrosion on.
+</font></div>
+
+<a name="wp1060241"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is any electrical corrosion?
+</font></div>
+</td>
+    <td>
+<a name="wp1060137"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1060140"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Repair the terminal, then go to Step 11.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1060162"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1060165"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1060269"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+10
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1060272"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+INSPECT CONSTANT VOLTAGE SUPPLY AND TP SIGNAL CIRCUITS FOR VOLTAGE DROP
+</b></font>
+
+<a name="wp1060355"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Turn the ignition switch to the ON position (Engine off).
+</font></div>
+
+<a name="wp1060369"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Inspect the voltage between following terminals: 
+</font></div>
+<dl>
+<a name="wp1060379"> </a><dd><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+-	TP sensor terminal C (wiring harness-side) and PCM terminal 2W
+</font></dd>
+
+<a name="wp1060394"> </a><dd><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+-	TP sensor terminal B (wiring harness-side) and PCM terminal 2I 
+</font></dd>
+</dl>
+<a name="wp1060405"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is the voltage <b>approx. 0 V</b>?
+</font></div>
+</td>
+    <td>
+<a name="wp1060275"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1060278"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1060300"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1060303"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Inspect the PCM terminals 2I and 2W (wiring harness-side) for rust or corrosion on.
+</font></div>
+
+<a name="wp1060445"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Repair or replace the terminal then go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1060457"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+11
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1060460"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+VERIFY TROUBLESHOOTING OF DTC P0121 COMPLETED
+</b></font>
+
+<a name="wp1060551"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Make sure to reconnect all disconnected connectors.
+</font></div>
+
+<a name="wp1060565"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Start the engine.
+</font></div>
+
+<a name="wp1060575"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Clear the DTC from the PCM memory using the WDS or equivalent.
+</font></div>
+
+<a name="wp1060585"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Access ECT, TP and MAF PIDs using WDS or equivalent.
+</font></div>
+
+<a name="wp1060595"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Warm up the engine until ECT PID is <b>above 70 </b>&deg;<b>C {158</b>&deg;<b>F}</b>.
+</font></div>
+
+<a name="wp1060621"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Drive the vehicle and read TP and MAF PIDs.
+</font></div>
+
+<a name="wp1060631"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Verify PID readings are within specifications
+</font></div>
+
+<a name="wp1060641"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+MAF PID: <b>above 32.0 g/s {4.2 lb/min}</b>
+</font></div>
+
+<a name="wp1060660"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+TP PID: <b>above 12.5% above 5 s</b>
+</font></div>
+
+<a name="wp1060674"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is the PENDING CODE for this DTC present?
+</font></div>
+</td>
+    <td>
+<a name="wp1060463"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1060466"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Replace the PCM, then go to Step 17.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1060490"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1060493"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to Step 17.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1060702"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+12
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1060705"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+INSPECT TP SENSOR TERMINALS FOR ELECTRICAL CORROSION
+</b></font>
+
+<a name="wp1060812"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Turn the ignition switch off.
+</font></div>
+
+<a name="wp1060826"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Disconnect TP sensor connector.
+</font></div>
+
+<a name="wp1060836"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Inspect for electrical corrosion on male and female TP sensor terminals.
+</font></div>
+
+<a name="wp1060846"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is any electrical corrosion found?
+</font></div>
+</td>
+    <td>
+<a name="wp1060708"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1060711"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Repair or replace the terminal or TP sensor, then go to Step 16.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1060739"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1060742"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1060874"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+13
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1060877"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+INSPECT GROUND CIRCUIT FOR VOLTAGE DROP
+</b></font>
+
+<a name="wp1060984"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Inspect the resistance between TP sensor terminal A (wiring harness-side) and body ground.
+</font></div>
+
+<a name="wp1060999"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is the resistance <b>approx. 0 ohm</b>&#160;?
+</font></div>
+</td>
+    <td>
+<a name="wp1060880"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1060883"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1060911"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1060914"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Inspect the PCM terminal 2AA (wiring harness-side) for rust or corrosion.
+</font></div>
+
+<a name="wp1061040"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Repair or replace the terminal.
+</font></div>
+
+<a name="wp1061054"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to Step 16.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1061058"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+14
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1061061"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+VERIFY TP SENSOR
+</b></font>
+
+<a name="wp1061176"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Does resistance smoothly change while gradually opening throttle valve?
+</font></div>
+</td>
+    <td>
+<a name="wp1061064"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1061067"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1061097"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1061100"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Replace the TP sensor, then go to Step 16.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1061208"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+15
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1061211"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+INSPECT PCM TERMINALS FOR ELECTRICAL CORROSION
+</b></font>
+
+<a name="wp1061326"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Disconnect the PCM connector.
+</font></div>
+
+<a name="wp1061340"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Inspect the PCM and PCM connector male and female terminals for electrical corrosion.
+</font></div>
+
+<a name="wp1061350"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is any electrical corrosion found?
+</font></div>
+</td>
+    <td>
+<a name="wp1061214"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1061217"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Repair the terminal, then go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1061247"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1061250"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1061378"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+16
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1061381"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+VERIFY TROUBLESHOOTING OF DTC P0121 COMPLETED
+</b></font>
+
+<a name="wp1061496"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Make sure to reconnect all disconnected connectors.
+</font></div>
+
+<a name="wp1061510"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Start the engine.
+</font></div>
+
+<a name="wp1061520"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Clear the DTC from the PCM memory using the WDS or equivalent.
+</font></div>
+
+<a name="wp1061530"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Access RPM, TP and MAF PIDs using WDS or equivalent.
+</font></div>
+
+<a name="wp1061578"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Verify TP PID reading is <b>below 50%</b> while MAF PID is <b>below 4.8 g/s {0.6 lb/min}</b> and RPM PID is <b>above 500 rpm</b>.
+</font></div>
+
+<a name="wp1061587"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is the PENDING CODE for this DTC present?
+</font></div>
+</td>
+    <td>
+<a name="wp1061384"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1061387"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Replace the PCM, then go to the next step.
+</font></div>
+
+<a name="wp1061607"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+ (See <a  href="B3E014018880W13.html#wp1025486">PCM REMOVAL/INSTALLATION [LF]</a>.)
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1061417"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1061420"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1061629"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+17
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1061632"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+VERIFY AFTER REPAIR PROCEDURE
+</b></font>
+
+<a name="wp1061771"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Perform the "After Repair Procedure".
+</font></div>
+
+<a name="wp1061789"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+ (See <a  href="B3E010200102W09.html#wp1025486">AFTER REPAIR PROCEDURE [LF]</a>.)
+</font></div>
+
+<a name="wp1061803"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Are any DTC present?
+</font></div>
+</td>
+    <td>
+<a name="wp1061635"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1061638"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the applicable DTC troubleshooting.
+</font></div>
+
+<a name="wp1061823"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+ (See <a  href="B3E010200102W11.html#wp1025486">DTC TABLE [LF]</a>.)
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1061674"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1061677"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Troubleshooting completed.
+</font></div>
+</td>
+</tr>
+</table>
+</div>
+<p><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+</b></font></p>
+
+<a name="wp1061993"> </a><p><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+ 
+</font></p>
+  </body>
+</html>

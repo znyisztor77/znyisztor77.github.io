@@ -1,0 +1,581 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher Professional Edition 7.0.2.1206">
+    <meta name="TEMPLATEBASE" content="Simple HTML">
+    <meta name="LASTUPDATED" content="09/29/03 15:30:20">
+    <title>DTC P2088 [ZJ, Z6]</title>
+  </head>
+
+  <body link="#3366CC" vlink="#9999CC" text="#000000" alink="#0000CC" bgcolor="#FFFFFF">
+<a name="wp1025486"> </a><h1><div align="center"><font color="Black" face="Arial, Helvetica, sans-serif" size="5"><b>
+DTC P2088 [ZJ, Z6]
+</b></font></div></h1>
+<hr>
+
+<a name="wp1058563"> </a><p><div align="right"><font color="#000000" face="Arial" size="2">
+B3E010202000W08
+</font></div></p>
+
+<a name="wp1060272"> </a><p><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+</font></p><div align="left">
+<table border="1">
+  <caption></caption>
+  <tr align="center">    <th>
+<a name="wp1058624"> </a><p><div align="center"><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+DTC P2088
+</b></font></div></p>
+</th>
+    <th>
+<a name="wp1058626"> </a><p><div align="center"><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+Variable valve timing control circuit low
+</b></font></div></p>
+</th>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1058566"> </a><p><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+<b>DETECTION CONDITION</b>
+</font></p>
+</td>
+    <td>
+<a name="wp1058699"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;If the PCM detects that the OCV drive current is less than the specification<sup>*</sup> when the OCV control duty target is <b>approx. 100 %</b>, the PCM determines that the variable valve timing control circuit low.
+</font></div>
+
+<a name="wp1058709"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+*: Detected specification value depends on the battery voltage.
+</font></div>
+
+<a name="wp1058716"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+Diagnostic support note
+</b></font>
+
+<a name="wp1058726"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;This is a continuous monitor (CCM).
+</font></div>
+
+<a name="wp1058736"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;The MIL illuminates if the PCM detects the above malfunction condition in the first drive cycle.
+</font></div>
+
+<a name="wp1058746"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;PENDING CODE is available if the PCM detects the above malfunction condition.
+</font></div>
+
+<a name="wp1058756"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;FREEZE FRAME DATA is available.
+</font></div>
+
+<a name="wp1058766"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;The DTC is stored in the PCM memory.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1058641"> </a><p><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+<b>POSSIBLE CAUSE</b>
+</font></p>
+</td>
+    <td>
+<a name="wp1058644"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;OCV malfunction
+</font></div>
+
+<a name="wp1058798"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Connector or terminal malfunction
+</font></div>
+
+<a name="wp1058808"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Open circuit in wiring harness between OCV terminal A and PCM terminal 2AK
+</font></div>
+
+<a name="wp1058818"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Short to GND in wiring harness between OCV terminal A and PCM terminal 2AK
+</font></div>
+
+<a name="wp1058828"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Open circuit in wiring harness between OCV terminal B and PCM terminal 2AG
+</font></div>
+
+<a name="wp1058838"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Short to GND in wiring harness between OCV terminal B and PCM terminal 2AG
+</font></div>
+
+<a name="wp1058848"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;PCM malfunction
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="2" rowspan="1">
+<a name="wp1058648"> </a><p><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+<img src="images/B3E0102W514.png" height="443" width="644" border="0" hspace="0" vspace="0">
+
+
+
+</font></p>
+</td>
+</tr>
+</table>
+</div>
+<p><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+</font></p>
+
+<a name="wp1058876"> </a><p><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+Diagnostic procedure</b></font></p><div align="left">
+<table border="1">
+  <caption></caption>
+  <tr align="center">    <th>
+<a name="wp1058990"> </a><p><div align="center"><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+STEP
+</b></font></div></p>
+</th>
+    <th colspan="2" rowspan="1">
+<a name="wp1058992"> </a><p><div align="center"><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+INSPECTION
+</b></font></div></p>
+</th>
+    <th>
+<a name="wp1058996"> </a><p><div align="center"><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+ACTION
+</b></font></div></p>
+</th>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1058884"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+1
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1058886"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+VERIFY FREEZE FRAME DATA HAS BEEN RECORDED
+</b></font>
+
+<a name="wp1059098"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Has FREEZE FRAME DATA been recorded?
+</font></div>
+</td>
+    <td>
+<a name="wp1058942"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1058945"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1059025"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1059028"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Record the FREEZE FRAME DATA on the repair order, then go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1059032"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+2
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1059035"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+VERIFY RELATED REPAIR INFORMATION AVAILABILITY
+</b></font>
+
+<a name="wp1059142"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Verify related service repair information availability.
+</font></div>
+
+<a name="wp1059156"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is any related repair information available?
+</font></div>
+</td>
+    <td>
+<a name="wp1059038"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1059041"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Perform repair or diagnosis according to the available repair information.
+</font></div>
+
+<a name="wp1059176"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;If the vehicle is not repaired, go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1059051"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1059054"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1059058"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+3
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1059061"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+INSPECT OCV CONNECTOR FOR POOR CONNECTION
+</b></font>
+
+<a name="wp1059223"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Turn the ignition switch off.
+</font></div>
+
+<a name="wp1059237"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Disconnect the OCV connector.
+</font></div>
+
+<a name="wp1059247"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Inspect for poor connection (such as damaged/pulled-out pins, corrosion).
+</font></div>
+
+<a name="wp1059260"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is there any malfunction?
+</font></div>
+</td>
+    <td>
+<a name="wp1059064"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1059067"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Repair or replace the terminal, then go to Step 8.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1059204"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1059207"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1059288"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+4
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1059291"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+INSPECT OCV CIRCUIT FOR SHORT TO GND
+</b></font>
+
+<a name="wp1059326"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Turn the ignition switch off.
+</font></div>
+
+<a name="wp1059340"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Inspect for continuity between the following circuits:
+</font></div>
+<dl>
+<a name="wp1059350"> </a><dd><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+-	OCV terminal A (wiring harness-side) and body GND
+</font></dd>
+
+<a name="wp1059365"> </a><dd><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+-	OCV terminal B (wiring harness-side) and body GND
+</font></dd>
+</dl>
+<a name="wp1059376"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is there continuity?
+</font></div>
+</td>
+    <td>
+<a name="wp1059294"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1059297"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Repair or replace the wiring harness for a possible short to GND, then go to Step 8.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1059307"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1059310"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1059404"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+5
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1059407"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+INSPECT OCV
+</b></font>
+
+<a name="wp1059442"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Inspect the OCV.
+</font></div>
+
+<a name="wp1059456"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+(See <a  href="B3E011014420W02.html#wp1025486">OIL CONTROL VALVE (OCV) INSPECTION [ZJ, Z6]</a>.)
+</font></div>
+
+<a name="wp1059470"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is there any malfunction?
+</font></div>
+</td>
+    <td>
+<a name="wp1059410"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1059413"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Replace the OCV, then go to Step 8.
+</font></div>
+
+<a name="wp1059498"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+(See <a  href="B3E011014420W01.html#wp1025486">OIL CONTROL VALVE (OCV) REMOVAL/INSTALLATION [ZJ, Z6]</a>.)
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1059423"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1059426"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1059520"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+6
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1059523"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+INSPECT PCM CONNECTOR FOR POOR CONNECTION
+</b></font>
+
+<a name="wp1059582"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Turn the ignition switch off.
+</font></div>
+
+<a name="wp1059596"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Disconnect the PCM connector.
+</font></div>
+
+<a name="wp1059606"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Inspect for poor connection (such as damaged/pulled-out pins, corrosion).
+</font></div>
+
+<a name="wp1059619"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is there any malfunction?
+</font></div>
+</td>
+    <td>
+<a name="wp1059526"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1059529"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Repair or replace the terminal, then go to Step 8.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1059545"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1059548"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1059647"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+7
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1059650"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+INSPECT OCV CIRCUIT FOR OPEN CIRCUIT
+</b></font>
+
+<a name="wp1059709"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Turn the ignition switch off.
+</font></div>
+
+<a name="wp1059723"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Inspect for continuity between the following circuits:
+</font></div>
+<dl>
+<a name="wp1059733"> </a><dd><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+-	OCV terminal A (wiring harness-side) and PCM terminal 2AK (wiring harness-side)
+</font></dd>
+
+<a name="wp1059749"> </a><dd><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+-	OCV terminal B (wiring harness-side) and PCM terminal 2AG (wiring harness-side)
+</font></dd>
+</dl>
+<a name="wp1059761"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is there continuity?
+</font></div>
+</td>
+    <td>
+<a name="wp1059653"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1059656"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1059672"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1059675"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Repair or replace the wiring harness for a possible open circuit, then go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1059789"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+8
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1059792"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+VERIFY TROUBLESHOOTING OF DTC P2088 COMPLETED
+</b></font>
+
+<a name="wp1059851"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Make sure to reconnect all disconnected connectors.
+</font></div>
+
+<a name="wp1059865"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Clear the DTC from the PCM memory using the WDS or equivalent.
+</font></div>
+
+<a name="wp1059875"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Start the engine.
+</font></div>
+
+<a name="wp1059885"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is the same DTC present?
+</font></div>
+</td>
+    <td>
+<a name="wp1059795"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1059798"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Replace the PCM, then go to the next step.
+</font></div>
+
+<a name="wp1059905"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+(See <a  href="B3E014018880W07.html#wp1025486">PCM REMOVAL/INSTALLATION [ZJ, Z6]</a>.)
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1059814"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1059817"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1059927"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+9
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1059930"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+VERIFY AFTER REPAIR PROCEDURE
+</b></font>
+
+<a name="wp1059997"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Perform the "AFTER REPAIR PROCEDURE".
+</font></div>
+
+<a name="wp1060015"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+(See <a  href="B3E010200102W20.html#wp1025486">AFTER REPAIR PROCEDURE [ZJ, Z6]</a>.)
+</font></div>
+
+<a name="wp1060029"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Are any DTCs present?
+</font></div>
+</td>
+    <td>
+<a name="wp1059933"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1059936"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the applicable DTC inspection.
+</font></div>
+
+<a name="wp1060049"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+(See <a  href="B3E010200102W22.html#wp1025486">DTC TABLE [ZJ, Z6]</a>.)
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1059954"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1059957"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+DTC troubleshooting completed.
+</font></div>
+</td>
+</tr>
+</table>
+</div>
+<p><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+</b></font></p>
+
+<a name="wp1060194"> </a><p><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+ 
+</font></p>
+  </body>
+</html>

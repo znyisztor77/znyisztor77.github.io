@@ -1,0 +1,633 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher Professional Edition 7.0.2.1206">
+    <meta name="TEMPLATEBASE" content="Simple HTML">
+    <meta name="LASTUPDATED" content="09/29/03 15:39:23">
+    <title>DTC P0511 [LF]</title>
+  </head>
+
+  <body link="#3366CC" vlink="#9999CC" text="#000000" alink="#0000CC" bgcolor="#FFFFFF">
+<a name="wp1025486"> </a><h1><div align="center"><font color="Black" face="Arial, Helvetica, sans-serif" size="5"><b>
+DTC P0511 [LF]
+</b></font></div></h1>
+<hr>
+
+<a name="wp1058563"> </a><p><div align="right"><font color="#000000" face="Arial" size="2">
+B3E010201087W05
+</font></div></p>
+
+<a name="wp1060389"> </a><p><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+</font></p><div align="left">
+<table border="1">
+  <caption></caption>
+  <tr align="center">    <th>
+<a name="wp1058624"> </a><p><div align="center"><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+DTC P0511
+</b></font></div></p>
+</th>
+    <th>
+<a name="wp1058626"> </a><p><div align="center"><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+IAC valve circuit problem
+</b></font></div></p>
+</th>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1058566"> </a><p><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+<b>DETECTION CONDITION</b>
+</font></p>
+</td>
+    <td>
+<a name="wp1058699"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;If the PCM detects that PCM terminal 2E voltage is above or below threshold<sup>*</sup> when the IAC control duty target is <b>within 16-30%</b>, the PCM determines that the IAC valve circuit has malfunction.
+</font></div>
+
+<a name="wp1058716"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+*: Detected threshold value depends on battery voltage and IAC control signal duty value.
+</font></div>
+
+<a name="wp1058723"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+Diagnostic support note
+</b></font>
+
+<a name="wp1058733"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;This is a continuous monitor (CCM).
+</font></div>
+
+<a name="wp1058743"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;The MIL illuminates if the PCM detects the above malfunction conditions in first consecutive drive cycles.
+</font></div>
+
+<a name="wp1058753"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;PENDING CODE is available if the PCM detects the above malfunction condition.
+</font></div>
+
+<a name="wp1058763"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;FREEZE FRAME DATA is available.
+</font></div>
+
+<a name="wp1058773"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;The DTC is stored in the PCM memory.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1058641"> </a><p><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+<b>POSSIBLE CAUSE</b>
+</font></p>
+</td>
+    <td>
+<a name="wp1058644"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;IAC valve circuit malfunction
+</font></div>
+
+<a name="wp1058805"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Short to ground in wiring harness between IAC valve terminal A and PCM terminal 2E
+</font></div>
+
+<a name="wp1058815"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Short to ground in wiring harness between IAC valve terminal B and PCM terminal 2F
+</font></div>
+
+<a name="wp1058825"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Open circuit in wiring harness between IAC valve terminal A and PCM terminal 2E
+</font></div>
+
+<a name="wp1058835"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Open circuit in wiring harness between IAC valve terminal B and PCM terminal 2F
+</font></div>
+
+<a name="wp1058845"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Short to power supply in wiring harness between IAC valve terminal A and PCM terminal 2E
+</font></div>
+
+<a name="wp1058855"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Short to power supply in wiring harness between IAC valve terminal B and PCM terminal 2F
+</font></div>
+
+<a name="wp1058865"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Poor connection of IAC valve connector or PCM connector
+</font></div>
+
+<a name="wp1058875"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;PCM malfunction
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="2" rowspan="1">
+<a name="wp1058648"> </a><p><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+<img src="images/B3E0102W035.png" height="407" width="644" border="0" hspace="0" vspace="0">
+
+
+
+</font></p>
+</td>
+</tr>
+</table>
+</div>
+<p><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+</font></p>
+
+<a name="wp1058903"> </a><p><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Diagnostic procedure</font></p><div align="left">
+<table border="1">
+  <caption></caption>
+  <tr align="center">    <th>
+<a name="wp1059021"> </a><p><div align="center"><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+STEP
+</b></font></div></p>
+</th>
+    <th colspan="2" rowspan="1">
+<a name="wp1059023"> </a><p><div align="center"><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+INSPECTION
+</b></font></div></p>
+</th>
+    <th>
+<a name="wp1059027"> </a><p><div align="center"><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+ACTION
+</b></font></div></p>
+</th>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1058915"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+1
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1058917"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+VERIFY FREEZE FRAME DATA HAS BEEN RECORDED
+</b></font>
+
+<a name="wp1059129"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Has FREEZE FRAME DATA been recorded?
+</font></div>
+</td>
+    <td>
+<a name="wp1058973"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1058976"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1059056"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1059059"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Record the FREEZE FRAME DATA on the repair order, then go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1059063"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+2
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1059066"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+VERIFY RELATED REPAIR INFORMATION AVAILABILITY
+</b></font>
+
+<a name="wp1059173"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Verify related service repair information availability.
+</font></div>
+
+<a name="wp1059187"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is any related repair information available?
+</font></div>
+</td>
+    <td>
+<a name="wp1059069"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1059072"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Perform repair or diagnosis according to the available repair information.
+</font></div>
+
+<a name="wp1059207"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;If the vehicle is not repaired, go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1059082"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1059085"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1059089"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+3
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1059092"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+INSPECT POOR CONNECTION OF IAC VALVE CONNECTOR
+</b></font>
+
+<a name="wp1059254"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Turn the ignition switch off.
+</font></div>
+
+<a name="wp1059268"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Disconnect IAC valve connector.
+</font></div>
+
+<a name="wp1059278"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Inspect for poor connection (such as damaged/pulled-out pins, corrosion).
+</font></div>
+
+<a name="wp1059291"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is there any malfunction?
+</font></div>
+</td>
+    <td>
+<a name="wp1059095"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1059098"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Repair or replace the terminal, then go to Step 9.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1059235"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1059238"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1059319"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+4
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1059322"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+INSPECT IAC VALVE ELECTRICAL MALFUNCTION
+</b></font>
+
+<a name="wp1059357"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Inspect the IAC valve.
+</font></div>
+
+<a name="wp1059371"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+ (See <a  href="B3E011320661W03.html#wp1025486">IDLE AIR CONTROL (IAC) VALVE INSPECTION [LF]</a>.)
+</font></div>
+
+<a name="wp1059385"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is IAC valve normal?
+</font></div>
+</td>
+    <td>
+<a name="wp1059325"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1059328"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1059338"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1059341"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Replace IAC valve, then go to Step 9.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1059413"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+5
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1059416"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+INSPECT CONTROL CIRCUIT FOR SHORT TO POWER
+</b></font>
+
+<a name="wp1059459"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Turn the ignition switch to the ON position (Engine off).
+</font></div>
+
+<a name="wp1059473"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Measure voltage between following terminal (wiring harness-side) and body ground: 
+</font></div>
+<dl>
+<a name="wp1059484"> </a><dd><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+-	IAC valve terminal A
+</font></dd>
+
+<a name="wp1059498"> </a><dd><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+-	IAC valve terminal B
+</font></dd>
+</dl>
+<a name="wp1059508"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is the voltage <b>B+</b>?
+</font></div>
+</td>
+    <td>
+<a name="wp1059419"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1059422"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Repair or replace wiring harness, then go to Step 9.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1059434"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1059437"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1059546"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+6
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1059549"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+INSPECT CONTROL CIRCUIT FOR SHORT TO GROUND
+</b></font>
+
+<a name="wp1059600"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Turn the ignition switch off.
+</font></div>
+
+<a name="wp1059614"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Inspect for continuity between following terminals (wiring harness-side) and body ground: 
+</font></div>
+<dl>
+<a name="wp1059625"> </a><dd><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+-	IAC valve terminal A
+</font></dd>
+
+<a name="wp1059639"> </a><dd><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+-	IAC valve terminal B
+</font></dd>
+</dl>
+<a name="wp1059649"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is there continuity?
+</font></div>
+</td>
+    <td>
+<a name="wp1059552"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1059555"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Repair or replace the wiring harness, then go to Step 9.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1059569"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1059572"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1059677"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+7
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1059680"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+INSPECT POOR CONNECTION OF PCM CONNECTOR
+</b></font>
+
+<a name="wp1059731"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Turn the ignition switch off.
+</font></div>
+
+<a name="wp1059745"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Disconnect the PCM connector.
+</font></div>
+
+<a name="wp1059755"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Inspect for poor connection (such as damaged/pulled-out pins, corrosion).
+</font></div>
+
+<a name="wp1059768"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is there any malfunction?
+</font></div>
+</td>
+    <td>
+<a name="wp1059683"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1059686"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Repair the terminal, then go to Step 9.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1059700"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1059703"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1059796"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+8
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1059799"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+INSPECT CONTROL CIRCUIT MALFUNCTION FOR OPEN CIRCUIT
+</b></font>
+
+<a name="wp1059850"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Inspect for continuity following terminals (wiring harness-side): 
+</font></div>
+<dl>
+<a name="wp1059865"> </a><dd><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+-	Between IAC valve terminal A and PCM terminal 2E
+</font></dd>
+
+<a name="wp1059879"> </a><dd><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+-	Between IAC valve terminal B and PCM terminal 2F
+</font></dd>
+</dl>
+<a name="wp1059889"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is there continuity?
+</font></div>
+</td>
+    <td>
+<a name="wp1059802"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1059805"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Repair or replace the wiring harness, then go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1059819"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1059822"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1059917"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+9
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1059920"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+VERIFY TROUBLESHOOTING OF DTC P0511 COMPLETED
+</b></font>
+
+<a name="wp1059971"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Make sure to reconnect all disconnected connectors.
+</font></div>
+
+<a name="wp1059985"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Clear the DTC using the WDS or equivalent.
+</font></div>
+
+<a name="wp1059995"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Start the engine.
+</font></div>
+
+<a name="wp1060005"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is the same DTC present?
+</font></div>
+</td>
+    <td>
+<a name="wp1059923"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1059926"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Replace the PCM, then go to the next step.
+</font></div>
+
+<a name="wp1060025"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+ (See <a  href="B3E014018880W13.html#wp1025486">PCM REMOVAL/INSTALLATION [LF]</a>.)
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1059940"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1059943"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1060047"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+10
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1060050"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+VERIFY AFTER REPAIR PROCEDURE
+</b></font>
+
+<a name="wp1060109"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Perform the "After Repair Procedure".
+</font></div>
+
+<a name="wp1060127"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+ (See <a  href="B3E010200102W09.html#wp1025486">AFTER REPAIR PROCEDURE [LF]</a>.)
+</font></div>
+
+<a name="wp1060141"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Are any DTC present?
+</font></div>
+</td>
+    <td>
+<a name="wp1060053"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1060056"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the applicable DTC troubleshooting.
+</font></div>
+
+<a name="wp1060161"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+ (See <a  href="B3E010200102W11.html#wp1025486">DTC TABLE [LF]</a>.)
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1060072"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1060075"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Troubleshooting completed.
+</font></div>
+</td>
+</tr>
+</table>
+</div>
+<p><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+</font></p>
+
+<a name="wp1060313"> </a><p><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+ 
+</font></p>
+  </body>
+</html>

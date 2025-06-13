@@ -1,0 +1,876 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher Professional Edition 7.0.2.1206">
+    <meta name="TEMPLATEBASE" content="Simple HTML">
+    <meta name="LASTUPDATED" content="09/29/03 15:26:14">
+    <title>DTC P0133 [ZJ, Z6]</title>
+  </head>
+
+  <body link="#3366CC" vlink="#9999CC" text="#000000" alink="#0000CC" bgcolor="#FFFFFF">
+<a name="wp1025486"> </a><h1><div align="center"><font color="Black" face="Arial, Helvetica, sans-serif" size="5"><b>
+DTC P0133 [ZJ, Z6]
+</b></font></div></h1>
+<hr>
+
+<a name="wp1058563"> </a><p><div align="right"><font color="#000000" face="Arial" size="2">
+B3E010200100W13
+</font></div></p>
+
+<a name="wp1061531"> </a><p><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+</font></p><div align="left">
+<table border="1">
+  <caption></caption>
+  <tr align="center">    <th>
+<a name="wp1058624"> </a><p><div align="center"><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+DTC P0133
+</b></font></div></p>
+</th>
+    <th>
+<a name="wp1058626"> </a><p><div align="center"><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+Front HO2S circuit slow response
+</b></font></div></p>
+</th>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1058566"> </a><p><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+<b>DETECTION CONDITION</b>
+</font></p>
+</td>
+    <td>
+<a name="wp1058568"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;The PCM monitors the inversion cycle period, lean-to-rich response time and rich-to-lean response time of the sensor. The PCM calculates the average of the inversion cycle period-specified inversion cycles, average response time from lean-to-rich, and from rich-to-lean when the following conditions are met. If any exceeds the threshold, the PCM determines that circuit has a malfunction.
+</font></div>
+
+<a name="wp1058698"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+MONITORING CONDITIONS
+</b></font>
+<dl>
+<a name="wp1058708"> </a><dd><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+-	HO2S heater, HO2S, and TWC repair verification drive mode
+</font></dd>
+
+<a name="wp1058718"> </a><dd><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+-	Following conditions are met:
+</font></dd>
+<dl>
+<a name="wp1058755"> </a><dd><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Calculation load is <b>18.0-59.4 %</b> (at <b>2,000 rpm</b>).
+</font></dd>
+
+<a name="wp1058764"> </a><dd><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Engine speed is <b>1,410-&#160;4,000 rpm</b>.
+</font></dd>
+
+<a name="wp1058786"> </a><dd><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Vehicle speed is <b>more than 3.76 km/h {2.33 mph}</b>.
+</font></dd>
+
+<a name="wp1058810"> </a><dd><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Engine coolant temperature is <b>more than -10 </b>&deg;<b>C {14 </b>&deg;<b>F}</b>.
+</font></dd>
+
+<a name="wp1058838"> </a><dd><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Front HO2S signal inversion cycle is <b>more than 10 cycles</b>.
+</font></dd>
+</dl></dl>
+<a name="wp1058862"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+Diagnostic support note
+</b></font>
+
+<a name="wp1058872"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;This is a intermittent monitor (HO2S).
+</font></div>
+
+<a name="wp1058882"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;The MIL illuminates if the PCM detects the above malfunction condition in two consecutive drive cycles or in one drive cycle while the DTC for the same malfunction has been stored in the PCM.
+</font></div>
+
+<a name="wp1058892"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;DIAGNOSTIC MONITORING TEST RESULTS is available.
+</font></div>
+
+<a name="wp1058902"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;PENDING CODE is available if the PCM detects the above malfunction condition during the first drive cycle.
+</font></div>
+
+<a name="wp1058912"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;FREEZE FRAME DATA is available.
+</font></div>
+
+<a name="wp1058922"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;The DTC is stored in the PCM memory.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1058641"> </a><p><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+<b>POSSIBLE CAUSE</b>
+</font></p>
+</td>
+    <td>
+<a name="wp1058644"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Front HO2S deterioration
+</font></div>
+
+<a name="wp1058954"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Looseness front HO2S
+</font></div>
+
+<a name="wp1058964"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Pressure regulator (built-in fuel pump unit) malfunction
+</font></div>
+
+<a name="wp1058975"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Fuel pump malfunction
+</font></div>
+
+<a name="wp1058985"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Clogged or restricted fuel filter (built-in fuel pump unit)
+</font></div>
+
+<a name="wp1058996"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Fuel leakage on fuel line from fuel distribution pipe and fuel pump
+</font></div>
+
+<a name="wp1059006"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Leakage exhaust system
+</font></div>
+
+<a name="wp1059016"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Purge solenoid valve malfunction
+</font></div>
+
+<a name="wp1059026"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Purge solenoid hoses improper connection
+</font></div>
+
+<a name="wp1059036"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Insufficient compression
+</font></div>
+
+<a name="wp1059046"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Engine malfunction (leakage engine coolant)
+</font></div>
+</td>
+</tr>
+</table>
+</div>
+<p><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+</font></p>
+
+<a name="wp1059078"> </a><p><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+Diagnostic procedure</b></font></p><div align="left">
+<table border="1">
+  <caption></caption>
+  <tr align="center">    <th>
+<a name="wp1059192"> </a><p><div align="center"><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+STEP
+</b></font></div></p>
+</th>
+    <th colspan="2" rowspan="1">
+<a name="wp1059194"> </a><p><div align="center"><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+INSPECTION
+</b></font></div></p>
+</th>
+    <th>
+<a name="wp1059198"> </a><p><div align="center"><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+ACTION
+</b></font></div></p>
+</th>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1059086"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+1
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1059088"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+VERIFY FREEZE FRAME DATA HAS BEEN RECORDED
+</b></font>
+
+<a name="wp1059300"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Has FREEZE FRAME DATA been recorded?
+</font></div>
+</td>
+    <td>
+<a name="wp1059144"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1059147"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1059227"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1059230"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Record the FREEZE FRAME DATA on the repair order, then go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1059234"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+2
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1059237"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+VERIFY RELATED REPAIR INFORMATION AVAILABILITY
+</b></font>
+
+<a name="wp1059344"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Verify related service repair information availability.
+</font></div>
+
+<a name="wp1059358"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is any related repair information available?
+</font></div>
+</td>
+    <td>
+<a name="wp1059240"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1059243"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Perform repair or diagnosis according to the available repair information.
+</font></div>
+
+<a name="wp1059378"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;If the vehicle is not repaired, go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1059253"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1059256"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1059260"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+3
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1059263"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+VERIFY RELATED PENDING CODE OR STORED DTC
+</b></font>
+
+<a name="wp1059425"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Turn the ignition switch off, then to the ON position (Engine off).
+</font></div>
+
+<a name="wp1059439"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Verify the related PENDING CODE or stored DTCs.
+</font></div>
+
+<a name="wp1059449"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is DTC P0443 present?
+</font></div>
+</td>
+    <td>
+<a name="wp1059266"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1059269"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the appropriate DTC inspection.
+</font></div>
+
+<a name="wp1059469"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+(See <a  href="B3E010200102W22.html#wp1025486">DTC TABLE [ZJ, Z6]</a>.)
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1059406"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1059409"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1059491"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+4
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1059494"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+IDENTIFY TRIGGER DTC FOR FREEZE FRAME DATA
+</b></font>
+
+<a name="wp1059537"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is DTC P0133 on FREEZE FRAME DATA?
+</font></div>
+</td>
+    <td>
+<a name="wp1059497"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1059500"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1059512"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1059515"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the FREEZE FRAME DATA DTC inspection.
+</font></div>
+
+<a name="wp1059571"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+(See <a  href="B3E010200102W22.html#wp1025486">DTC TABLE [ZJ, Z6]</a>.)
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1059583"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+5
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1059586"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+VERIFY CURRENT INPUT SIGNAL STATUS
+</b></font>
+
+<a name="wp1059637"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Warm up the engine.
+</font></div>
+
+<a name="wp1059651"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Access the O2S11 PID using the WDS or equivalent.
+</font></div>
+
+<a name="wp1059661"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Inspect the PID under following accelerator pedal conditions (in PARK (ATX) or NEUTRAL (MTX)).
+</font></div>
+
+<a name="wp1059671"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is the PID normal?
+</font></div>
+<dl>
+<a name="wp1059681"> </a><dd><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+-	<b>More than 0.55 V</b> when suddenly depressing the accelerator pedal (rich condition)
+</font></dd>
+
+<a name="wp1059702"> </a><dd><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+-	<b>Less than 0.55 V</b> just after releasing the accelerator pedal (lean condition)
+</font></dd>
+</dl></td>
+    <td>
+<a name="wp1059589"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1059592"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to step 8.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1059606"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1059609"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1059737"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+6
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1059740"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+INSPECT INSTALLATION OF FRONT HO2S
+</b></font>
+
+<a name="wp1059799"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Inspect if the front HO2S is loosely installed.
+</font></div>
+
+<a name="wp1059813"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is the front HO2S installed securely?
+</font></div>
+</td>
+    <td>
+<a name="wp1059743"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1059746"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1059762"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1059765"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Retighten the front HO2S, then go to Step 13.
+</font></div>
+
+<a name="wp1059843"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+(See <a  href="B3E014018860W05.html#wp1025486">FRONT HEATED OXYGEN SENSOR (HO2S) REMOVAL/INSTALLATION [ZJ, Z6]</a>.)
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1059855"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+7
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1059858"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+INSPECT GAS LEAKAGE FROM EXHAUST SYSTEM
+</b></font>
+
+<a name="wp1059925"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Visually inspect if there is any gas leakage between the exhaust manifold and front HO2S.
+</font></div>
+
+<a name="wp1059939"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is there gas leakage?
+</font></div>
+</td>
+    <td>
+<a name="wp1059861"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1059864"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Repair or replace any malfunctioning exhaust part, then go to Step 13.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1059882"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1059885"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Replace the front HO2S, then go to Step 13.
+</font></div>
+
+<a name="wp1059969"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+(See <a  href="B3E014018860W05.html#wp1025486">FRONT HEATED OXYGEN SENSOR (HO2S) REMOVAL/INSTALLATION [ZJ, Z6]</a>.)
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1059981"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+8
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1059984"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+INSPECT LONG TERM FUEL TRIM
+</b></font>
+
+<a name="wp1060059"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Access the LONGFT1 PID.
+</font></div>
+
+<a name="wp1060073"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Compare it with FREEZE FRAME DATA recorded at Step 1.
+</font></div>
+
+<a name="wp1060083"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is it below FFD value?
+</font></div>
+</td>
+    <td>
+<a name="wp1059987"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1059990"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+The engine is driven under rich condition. Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1060010"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1060013"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+The engine is driven under lean condition. Go to step 10.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1060111"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+9
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1060114"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+INSPECT FUEL LINE PRESSURE (EXCESSIVE FUEL LINE PRESSURE)
+</b></font>
+
+<a name="wp1060189"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Turn the ignition switch off.
+</font></div>
+
+<a name="wp1060203"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Inspect the fuel line pressure while the engine running.
+</font></div>
+
+<a name="wp1060213"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+(See <a  href="B3E011401006W05.html#wp1025486">FUEL LINE PRESSURE INSPECTION [ZJ, Z6, LF]</a>.)
+</font></div>
+
+<a name="wp1060227"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is the fuel line pressure normal?
+</font></div>
+</td>
+    <td>
+<a name="wp1060117"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1060120"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to Step 12.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1060140"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1060143"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Inspect the fuel pump maximum pressure and fuel return pipe for clogging.
+</font></div>
+
+<a name="wp1060257"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+(See <a  href="B3E011413350W03.html#wp1025486">FUEL PUMP UNIT INSPECTION [ZJ, Z6, LF]</a>.)
+</font></div>
+
+<a name="wp1060271"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;If there is any malfunction, repair or replace suspected parts.
+</font></div>
+
+<a name="wp1060285"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;If all items above are normal, replace the fuel pump unit.
+</font></div>
+
+<a name="wp1060295"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+(See <a  href="B3E011413350W01.html#wp1025486">FUEL PUMP UNIT REMOVAL/INSTALLATION [ZJ, Z6, LF]</a>.)
+</font></div>
+
+<a name="wp1060309"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Then go to Step 13.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1060313"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+10
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1060316"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+INSPECT FUEL LINE PRESSURE (LOW FUEL LINE PRESSURE)
+</b></font>
+
+<a name="wp1060415"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Turn the ignition switch off.
+</font></div>
+
+<a name="wp1060429"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Inspect the fuel line pressure while the engine running.
+</font></div>
+
+<a name="wp1060439"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+(See <a  href="B3E011401006W05.html#wp1025486">FUEL LINE PRESSURE INSPECTION [ZJ, Z6, LF]</a>.)
+</font></div>
+
+<a name="wp1060453"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is the fuel line pressure normal?
+</font></div>
+</td>
+    <td>
+<a name="wp1060319"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1060322"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to step 12.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1060348"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1060351"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1060481"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+11
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1060484"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+INSPECT FUEL LINE FROM FUEL PUMP TO FUEL DELIVERY PIPE
+</b></font>
+
+<a name="wp1060591"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Visually inspect fuel line for any leakage.
+</font></div>
+
+<a name="wp1060605"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is any fuel leakage found?
+</font></div>
+</td>
+    <td>
+<a name="wp1060487"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1060490"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Replace suspected fuel line, then go to Step 13.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1060518"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1060521"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Inspect the fuel filter for following:
+</font></div>
+
+<a name="wp1060635"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Foreign materials or stain inside fuel filter (low-pressure side)
+</font></div>
+
+<a name="wp1060650"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Perform following actions according to result.
+</font></div>
+
+<a name="wp1060656"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;If there is any foreign material or stain inside fuel filter (low-pressure side), clean the fuel tank and filter.
+</font></div>
+
+<a name="wp1060671"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;If there is no malfunction, replace the fuel pump unit.
+</font></div>
+
+<a name="wp1060681"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+(See <a  href="B3E011413350W01.html#wp1025486">FUEL PUMP UNIT REMOVAL/INSTALLATION [ZJ, Z6, LF]</a>.)
+</font></div>
+
+<a name="wp1060695"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Then go to Step 13.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1060699"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+12
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1060702"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+INSPECT SEALING OF ENGINE COOLANT PASSAGE
+</b></font>
+
+<a name="wp1060817"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Perform the "ENGINE COOLANT LEAKAGE INSPECTION".
+</font></div>
+
+<a name="wp1060835"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+(See <a  href="B3E011215001W05.html#wp1025486">ENGINE COOLANT LEAKAGE INSPECTION</a>.)
+</font></div>
+
+<a name="wp1060849"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is there any malfunction?
+</font></div>
+</td>
+    <td>
+<a name="wp1060705"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1060708"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Repair or replace malfunctioning part according to the inspection result. Then go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1060738"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1060741"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1060877"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+13
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1060880"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+VERIFY TROUBLESHOOTING OF DTC P0133 COMPLETED
+</b></font>
+
+<a name="wp1061003"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Make sure to reconnect all disconnected connectors.
+</font></div>
+
+<a name="wp1061017"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Clear the DTC from the PCM memory using the WDS or equivalent.
+</font></div>
+
+<a name="wp1061027"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Perform the "HO2S heater, HO2S, and TWC Repair Verification Drive Mode".
+</font></div>
+
+<a name="wp1061041"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+(See <a  href="B3E010200102W21.html#wp1025486">OBD DRIVE MODE [ZJ, Z6]</a>.)
+</font></div>
+
+<a name="wp1061055"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Is the PENDING CODE for this DTC present?
+</font></div>
+</td>
+    <td>
+<a name="wp1060883"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1060886"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Replace the PCM, then go to the next step.
+</font></div>
+
+<a name="wp1061075"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+(See <a  href="B3E014018880W07.html#wp1025486">PCM REMOVAL/INSTALLATION [ZJ, Z6]</a>.)
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1060918"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1060921"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the next step.
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="2">
+<a name="wp1061097"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+14
+</font></div>
+</td>
+    <td colspan="1" rowspan="2">
+<a name="wp1061100"> </a><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+VERIFY AFTER REPAIR PROCEDURE
+</b></font>
+
+<a name="wp1061239"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Perform the "AFTER REPAIR PROCEDURE".
+</font></div>
+
+<a name="wp1061257"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+(See <a  href="B3E010200102W20.html#wp1025486">AFTER REPAIR PROCEDURE [ZJ, Z6]</a>.)
+</font></div>
+
+<a name="wp1061271"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+&bull;&nbsp;Are any DTCs present?
+</font></div>
+</td>
+    <td>
+<a name="wp1061103"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Yes
+</font></div>
+</td>
+    <td>
+<a name="wp1061106"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+Go to the applicable DTC inspection.
+</font></div>
+
+<a name="wp1061291"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+(See <a  href="B3E010200102W22.html#wp1025486">DTC TABLE [ZJ, Z6]</a>.)
+</font></div>
+</td>
+</tr>
+  <tr align="left">    <td>
+<a name="wp1061142"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+No
+</font></div>
+</td>
+    <td>
+<a name="wp1061145"> </a><div><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+DTC troubleshooting completed.
+</font></div>
+</td>
+</tr>
+</table>
+</div>
+<p><font color="Black" face="Arial, Helvetica, sans-serif" size="2"><b>
+</b></font></p>
+
+<a name="wp1061454"> </a><p><font color="Black" face="Arial, Helvetica, sans-serif" size="2">
+ 
+</font></p>
+  </body>
+</html>
