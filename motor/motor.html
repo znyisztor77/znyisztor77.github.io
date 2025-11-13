@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yamaha MT-03 Szervizkézikönyv</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            overflow-x: hidden;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Navigáció */
+        .sidebar {
+            width: 320px;
+            background: white;
+            border-right: 1px solid #e0e0e0;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+
+        .sidebar-header {
+            padding: 20px;
+            background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .sidebar-header h1 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .sidebar-header .subtitle {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        .progress-container {
+            margin-top: 15px;
+            display: none;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: white;
+            width: 0%;
+            transition: width 0.3s;
+        }
+
+        .progress-text {
+            font-size: 12px;
+            margin-top: 5px;
+            opacity: 0.9;
+        }
+
+        .toc {
+            padding: 10px;
+        }
+
+        .toc-empty {
+            padding: 40px 20px;
+            text-align: center;
+            color: #999;
+        }
+
+        .toc-section {
+            margin-bottom: 5px;
+        }
+
+        .toc-main {
+            padding: 10px 12px;
+            cursor: pointer;
+            background: #f8f9fa;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.2s;
+            font-weight: 500;
+            color: #2d3748;
+            font-size: 13px;
+        }
+
+        .toc-main:hover {
+            background: #e9ecef;
+            transform: translateX(3px);
+        }
+
+        .toc-main.active {
+            background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+            color: white;
+        }
+
+        .toc-arrow {
+            transition: transform 0.3s;
+            font-size: 11px;
+        }
+
+        .toc-arrow.expanded {
+            transform: rotate(90deg);
+        }
+
+        .toc-subs {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            margin-top: 3px;
+        }
+
+        .toc-subs.expanded {
+            max-height: 2000px;
+        }
+
+        .toc-sub {
+            padding: 8px 12px 8px 25px;
+            cursor: pointer;
+            border-left: 3px solid #e9ecef;
+            margin: 2px 0;
+            transition: all 0.2s;
+            color: #4a5568;
+            font-size: 12px;
+        }
+
+        .toc-sub:hover {
+            border-left-color: #1a237e;
+            background: #f8f9fa;
+            padding-left: 30px;
+        }
+
+        .toc-sub.active {
+            border-left-color: #1a237e;
+            background: #edf2f7;
+            font-weight: 500;
+        }
+
+        /* Tartalom terület */
+        .main-content {
+            margin-left: 320px;
+            flex: 1;
+            padding: 40px;
+            max-width: 1400px;
+        }
+
+        .content-header {
+            margin-bottom: 30px;
+        }
+
+        .content-header h2 {
+            font-size: 28px;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+
+        .content-info {
+            color: #718096;
+            font-size: 14px;
+        }
+
+        .page-section {
+            margin-bottom: 60px;
+            scroll-margin-top: 20px;
+        }
+
+        .page-title {
+            font-size: 20px;
+            color: #2d3748;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e9ecef;
+            font-weight: 600;
+        }
+
+        .page-image {
+            width: 100%;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            display: none;
+        }
+
+        .loading-content {
+            text-align: center;
+            color: white;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(255,255,255,0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                position: relative;
+                height: auto;
+            }
+            .main-content {
+                margin-left: 0;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p id="loadingText">PDF feldolgozása...</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Navigációs panel -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h1>🏍️ Yamaha MT-03</h1>
+                <div class="subtitle">Szervizkézikönyv 2006</div>
+                <div class="progress-container" id="progressContainer">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="progress-text" id="progressText">0 / 0 oldal</div>
+                </div>
+            </div>
+            <div class="toc" id="toc">
+                <div class="toc-empty">
+                    📄 Betöltés folyamatban...
+                </div>
+            </div>
+        </div>
+
+        <!-- Tartalom terület -->
+        <div class="main-content" id="mainContent">
+            <div class="content-header">
+                <h2>Yamaha MT-03 Szervizkézikönyv</h2>
+                <p class="content-info">Modell év: 2006 | Kód: 5YK-F8197-E0</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+        // PDF fájl elérési útja
+        const PDF_FILE_PATH = 'yamaha_service.pdf';
+
+        // Tartalomjegyzék struktúra
+        const tableOfContents = [
+            {
+                title: "General Information",
+                subsections: [
+                    { title: "Identification", pages: [10] }, //11
+                    { title: "Features", pages: [11] }, //12, 13, 14
+                    { title: "Important Information", pages: [16] }, //17, 18
+                    { title: "Checking The Connections", pages: [18] }, //17, 18
+                    { title: "Special Tools", pages: [19] } //20, 21, 22, 23, 24
+                ]
+            },
+            {
+                title: "Specifications",
+                subsections: [
+                    { title: "General Specifications", pages: [26] }, //31
+                    { title: "Engine Specifications", pages: [32, 33, 34, 35, 36, 37, 38, 39] }, //32, 33, 34, 35, 36, 37, 38, 39
+                    { title: "Chassis Specifications", pages: [40, 41, 42] }, //40, 41, 42
+                    { title: "Electrical Specifications", pages: [43, 44, 45] }, //43, 44, 45
+                    { title: "Tightening Torques", pages: [46, 47, 48, 49, 50, 51, 52] }, //46, 47, 48, 49, 50, 51, 52
+                    { title: "Lubrication", pages: [53, 54, 55] }, //53, 54, 55]
+                    { title: "Cooling System Diagrams", pages: [56, 57, 58, 59] }, //56, 57, 58, 59
+                    { title: "Lubrication Chart & Diagrams", pages: [60, 61, 62, 63, 64, 65, 66, 67, 68, 69] }, //60, 61, 62, 63, 64, 65, 66, 67, 68, 69
+                    { title: "Cable Routing", pages: [70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91] } //70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91
+                ]
+            },
+            {
+                title: "Periodic Checks and Adjustments",
+                subsections: [
+                    { title: "Periodic Maintenance", pages: [93, 94] },
+                    { title: "Engine", pages: [95, 96, 97, 98, 99, 100, 101, 102, 103, 104] },
+                    { title: "Chassis", pages: [110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120] },
+                    { title: "Electrical System", pages: [121, 122, 123] }
+                ]
+            },
+            {
+                title: "Chassis",
+                subsections: [
+                    { title: "General Chassis", pages: [129, 130, 131, 132, 133, 134] },
+                    { title: "Front Wheel", pages: [135, 136, 137, 138, 139, 140, 141] },
+                    { title: "Rear Wheel", pages: [142, 143, 144, 145, 146, 147, 148] },
+                    { title: "Front Brake", pages: [149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159] },
+                    { title: "Rear Brake", pages: [160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170] },
+                    { title: "Handlebar", pages: [171, 172, 173, 174, 175] },
+                    { title: "Front Fork", pages: [176, 177, 178, 179, 180, 181, 182, 183] },
+                    { title: "Steering Head", pages: [185, 186, 187, 188, 189] },
+                    { title: "Rear Shock Absorber", pages: [190, 191, 192] },
+                    { title: "Swingarm", pages: [193, 194, 195, 196] },
+                    { title: "Chain Drive", pages: [197, 198, 199, 200] }
+                ]
+            },
+            {
+                title: "Engine",
+                subsections: [
+                    { title: "Engine Removal & Installation", pages: [203, 204, 205, 206, 207, 208] },
+                    { title: "Cylinder Head", pages: [209, 210, 211, 212, 213, 214] },
+                    { title: "Rocker Arms & Camshaft", pages: [215, 216, 217, 218, 219] },
+                    { title: "Valves & Valve Springs", pages: [220, 221, 222, 223, 224, 225, 226] },
+                    { title: "Cylinder & Piston", pages: [227, 228, 229, 230, 231, 232] },
+                    { title: "Clutch", pages: [233, 234, 235, 236, 237, 238, 239, 240] },
+                    { title: "Oil Pump", pages: [241, 242, 243, 244, 245] },
+                    { title: "Balancer Driven Gear", pages: [246, 247] },
+                    { title: "Shift Shaft", pages: [249, 250, 251] },
+                    { title: "Starter Clutch & A.C. Magneto", pages: [252, 253, 254, 255, 256] },
+                    { title: "Electric Starter", pages: [257, 258, 259, 260] },
+                    { title: "Crankcase", pages: [261, 262, 263, 264, 265, 266] },
+                    { title: "Crankshaft", pages: [267, 268, 269] },
+                    { title: "Transmission", pages: [270, 271, 272, 273, 274, 275] }
+                ]
+            },
+            {
+                title: "Cooling System",
+                subsections: [
+                    { title: "Radiator", pages: [281, 282, 283] },
+                    { title: "Thermostat", pages: [284, 285] },
+                    { title: "Water Pump", pages: [287, 288, 289, 290, 291] }
+                ]
+            },
+            {
+                title: "Fuel Injection System",
+                subsections: [
+                    { title: "Fuel Tank", pages: [295, 296] },
+                    { title: "Throttle Body Assembly", pages: [297, 298, 299, 300, 301, 302, 303] },
+                    { title: "Air Induction System", pages: [304, 305, 306, 307, 308] },
+                    { title: "FI System Diagnostics", pages: [309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329, 330, 331, 332, 333, 334, 335, 336, 337, 338] }
+                ]
+            },
+            {
+                title: "Electrical System",
+                subsections: [
+                   //{ title: "Ignition System", pages: [343, 344, 345] },
+                    { title: "Ignition System", pages: [328] },
+                    { title: "Electric Starting System", pages: [346, 347, 348, 349, 350] },
+                    { title: "Charging System", pages: [351, 352, 353, 354] },
+                    { title: "Lighting System", pages: [355, 356, 357, 358] },
+                    { title: "Signaling System", pages: [359, 360, 361, 362, 363, 364] },
+                    { title: "Cooling System", pages: [365, 366, 367] },
+                    { title: "Immobilizer System", pages: [369, 370, 371, 372, 373, 374, 375, 376, 377] },
+                    { title: "Electrical Components", pages: [379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389, 390, 391, 392, 393, 394, 395, 396, 397, 398, 399, 400, 401] }
+                ]
+            },
+            {
+                title: "Troubleshooting",
+                subsections: [
+                    { title: "General Troubleshooting", pages: [407, 408, 409, 410] }
+                ]
+            }
+        ];
+
+        let pdfPages = [];
+
+        // Automatikus betöltés az oldal indulásakor
+        window.addEventListener('load', () => {
+            loadPDFFromPath(PDF_FILE_PATH);
+        });
+
+        async function loadPDFFromPath(path) {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            const progressContainer = document.getElementById('progressContainer');
+            const progressFill = document.getElementById('progressFill');
+            const progressText = document.getElementById('progressText');
+            
+            loadingOverlay.style.display = 'flex';
+            progressContainer.style.display = 'block';
+
+            try {
+                const response = await fetch(path);
+                if (!response.ok) {
+                    throw new Error('A PDF fájl nem található: ' + path);
+                }
+                
+                const arrayBuffer = await response.arrayBuffer();
+                const pdf = await pdfjsLib.getDocument(arrayBuffer).promise;
+                const totalPages = pdf.numPages;
+                
+                pdfPages = [];
+
+                for (let pageNum = 1; pageNum <= totalPages; pageNum++) {
+                    const page = await pdf.getPage(pageNum);
+                    const viewport = page.getViewport({ scale: 2.0 });
+                    
+                    const canvas = document.createElement('canvas');
+                    const context = canvas.getContext('2d');
+                    canvas.height = viewport.height;
+                    canvas.width = viewport.width;
+
+                    await page.render({
+                        canvasContext: context,
+                        viewport: viewport
+                    }).promise;
+
+                    const imageData = canvas.toDataURL('image/png');
+                    pdfPages.push(imageData);
+
+                    const progress = (pageNum / totalPages) * 100;
+                    progressFill.style.width = progress + '%';
+                    progressText.textContent = `${pageNum} / ${totalPages} oldal`;
+                }
+
+                renderContent();
+                buildTOC();
+                
+                loadingOverlay.style.display = 'none';
+                progressContainer.style.display = 'none';
+
+            } catch (error) {
+                console.error('Hiba a PDF feldolgozása során:', error);
+                document.getElementById('loadingText').textContent = 'Hiba: ' + error.message;
+                setTimeout(() => {
+                    loadingOverlay.style.display = 'none';
+                }, 3000);
+            }
+        }
+
+        function renderContent() {
+            const mainContent = document.getElementById('mainContent');
+            mainContent.innerHTML = '<div class="content-header"><h2>Yamaha MT-03 Szervizkézikönyv</h2><p class="content-info">Modell év: 2006 | Kód: 5YK-F8197-E0</p></div>';
+
+            tableOfContents.forEach((section, sectionIndex) => {
+                if (section.subsections) {
+                    section.subsections.forEach((subsection, subIndex) => {
+                        renderSection(subsection, `${sectionIndex}-${subIndex}`, mainContent);
+                    });
+                }
+            });
+        }
+
+        function renderSection(section, id, container) {
+            const sectionDiv = document.createElement('div');
+            sectionDiv.className = 'page-section';
+            sectionDiv.id = `section-${id}`;
+
+            const title = document.createElement('h3');
+            title.className = 'page-title';
+            title.textContent = section.title;
+            sectionDiv.appendChild(title);
+
+            section.pages.forEach(pageNum => {
+                if (pdfPages[pageNum - 1]) {
+                    const img = document.createElement('img');
+                    img.className = 'page-image';
+                    img.src = pdfPages[pageNum - 1];
+                    img.alt = `${section.title} - ${pageNum}. oldal`;
+                    img.loading = 'lazy';
+                    sectionDiv.appendChild(img);
+                }
+            });
+
+            container.appendChild(sectionDiv);
+        }
+
+        function buildTOC() {
+            const tocContainer = document.getElementById('toc');
+            tocContainer.innerHTML = '';
+
+            tableOfContents.forEach((section, sectionIndex) => {
+                const sectionDiv = document.createElement('div');
+                sectionDiv.className = 'toc-section';
+
+                const mainDiv = document.createElement('div');
+                mainDiv.className = 'toc-main';
+                mainDiv.innerHTML = `
+                    <span>${section.title}</span>
+                    <span class="toc-arrow">▶</span>
+                `;
+
+                const subsDiv = document.createElement('div');
+                subsDiv.className = 'toc-subs';
+
+                if (section.subsections) {
+                    section.subsections.forEach((subsection, subIndex) => {
+                        const subDiv = document.createElement('div');
+                        subDiv.className = 'toc-sub';
+                        subDiv.textContent = subsection.title;
+                        subDiv.onclick = () => scrollToSection(`${sectionIndex}-${subIndex}`);
+                        subsDiv.appendChild(subDiv);
+                    });
+                }
+
+                mainDiv.onclick = (e) => {
+                    e.stopPropagation();
+                    const arrow = mainDiv.querySelector('.toc-arrow');
+                    arrow.classList.toggle('expanded');
+                    subsDiv.classList.toggle('expanded');
+                };
+
+                sectionDiv.appendChild(mainDiv);
+                sectionDiv.appendChild(subsDiv);
+                tocContainer.appendChild(sectionDiv);
+            });
+        }
+
+        function scrollToSection(id) {
+            const element = document.getElementById(`section-${id}`);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    </script>
+</body>
+</html>

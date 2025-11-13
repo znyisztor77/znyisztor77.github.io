@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szerelési Útmutató</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <link rel="stylesheet" href="motorstyle.css">
+        
+</head>
+<body>
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p id="loadingText">PDF feldolgozása...</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Navigációs panel -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h1>🔧 Szerelési Útmutató</h1>
+                <div class="file-upload">
+                    <input type="file" id="pdfUpload" accept=".pdf">
+                    <label for="pdfUpload">📄 PDF Betöltése</label>
+                </div>
+                <div class="progress-container" id="progressContainer">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="progress-text" id="progressText">0 / 0 oldal</div>
+                </div>
+            </div>
+            <div class="toc" id="toc">
+                <div class="toc-empty">
+                    📁 Tölts fel egy PDF fájlt<br>a megjelenítéshez
+                </div>
+            </div>
+        </div>
+
+        <!-- Tartalom terület -->
+        <div class="main-content" id="mainContent">
+            <div class="content-header">
+                <h2>Üdvözöllek! 👋</h2>
+                <p class="content-info">Tölts fel egy szerelési útmutatót PDF formátumban a kezdéshez.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+        // Példa tartalomjegyzék - cseréld ki a sajátodra!
+        const tableOfContents = [
+            {
+                title: "1. Bevezetés",
+                pages: [1, 2, 3]
+            },
+            {
+                title: "2. Szükséges eszközök",
+                pages: [4, 5]
+            },
+            {
+                title: "3. Alkatrészek listája",
+                pages: [6, 7, 8]
+            },
+            {
+                title: "4. Előkészületek",
+                pages: [9, 10, 11, 12]
+            },
+            {
+                title: "5. Szerelési lépések",
+                subsections: [
+                    { title: "5.1 Alapszerkezet összeszerelése", pages: [13, 14, 15, 16] },
+                    { title: "5.2 Villamos rendszer bekötése", pages: [17, 18, 19, 20] },
+                    { title: "5.3 Vezetékek csatlakoztatása", pages: [21, 22, 23] },
+                    { title: "5.4 Burkolat felszerelése", pages: [24, 25, 26] }
+                ]
+            },
+            {
+                title: "6. Ellenőrzés és tesztelés",
+                pages: [27, 28, 29]
+            },
+            {
+                title: "7. Karbantartás",
+                pages: [30, 31, 32]
+            },
+            {
+                title: "8. Hibaelhárítás",
+                pages: [33, 34, 35, 36]
+            },
+            {
+                title: "9. Biztonsági előírások",
+                pages: [37, 38]
+            },
+            {
+                title: "10. Garanciális információk",
+                pages: [39, 40]
+            }
+        ];
+
+        let pdfPages = [];
+
+        async function processPDF(file) {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            const progressContainer = document.getElementById('progressContainer');
+            const progressFill = document.getElementById('progressFill');
+            const progressText = document.getElementById('progressText');
+            
+            loadingOverlay.style.display = 'flex';
+            progressContainer.style.display = 'block';
+
+            try {
+                const arrayBuffer = await file.arrayBuffer();
+                const pdf = await pdfjsLib.getDocument(arrayBuffer).promise;
+                const totalPages = pdf.numPages;
+                
+                pdfPages = [];
+
+                for (let pageNum = 1; pageNum <= totalPages; pageNum++) {
+                    const page = await pdf.getPage(pageNum);
+                    const viewport = page.getViewport({ scale: 2.0 });
+                    
+                    const canvas = document.createElement('canvas');
+                    const context = canvas.getContext('2d');
+                    canvas.height = viewport.height;
+                    canvas.width = viewport.width;
+
+                    await page.render({
+                        canvasContext: context,
+                        viewport: viewport
+                    }).promise;
+
+                    const imageData = canvas.toDataURL('image/png');
+                    pdfPages.push(imageData);
+
+                    // Progress update
+                    const progress = (pageNum / totalPages) * 100;
+                    progressFill.style.width = progress + '%';
+                    progressText.textContent = `${pageNum} / ${totalPages} oldal`;
+                }
+
+                renderContent();
+                buildTOC();
+                
+                loadingOverlay.style.display = 'none';
+                progressContainer.style.display = 'none';
+
+            } catch (error) {
+                console.error('Hiba a PDF feldolgozása során:', error);
+                alert('Hiba történt a PDF betöltése során. Kérlek, próbáld újra!');
+                loadingOverlay.style.display = 'none';
+            }
+        }
+
+        function renderContent() {
+            const mainContent = document.getElementById('mainContent');
+            mainContent.innerHTML = '';
+
+            tableOfContents.forEach((section, sectionIndex) => {
+                if (section.subsections) {
+                    section.subsections.forEach((subsection, subIndex) => {
+                        renderSection(subsection, `${sectionIndex}-${subIndex}`, mainContent);
+                    });
+                } else {
+                    renderSection(section, sectionIndex.toString(), mainContent);
+                }
+            });
+        }
+
+        function renderSection(section, id, container) {
+            const sectionDiv = document.createElement('div');
+            sectionDiv.className = 'page-section';
+            sectionDiv.id = `section-${id}`;
+
+            const title = document.createElement('h3');
+            title.className = 'page-title';
+            title.textContent = section.title;
+            sectionDiv.appendChild(title);
+
+            section.pages.forEach(pageNum => {
+                if (pdfPages[pageNum - 1]) {
+                    const img = document.createElement('img');
+                    img.className = 'page-image';
+                    img.src = pdfPages[pageNum - 1];
+                    img.alt = `${section.title} - ${pageNum}. oldal`;
+                    img.loading = 'lazy';
+                    sectionDiv.appendChild(img);
+                }
+            });
+
+            container.appendChild(sectionDiv);
+        }
+
+        function buildTOC() {
+            const tocContainer = document.getElementById('toc');
+            tocContainer.innerHTML = '';
+
+            tableOfContents.forEach((section, sectionIndex) => {
+                const sectionDiv = document.createElement('div');
+                sectionDiv.className = 'toc-section';
+
+                if (section.subsections) {
+                    const mainDiv = document.createElement('div');
+                    mainDiv.className = 'toc-main';
+                    mainDiv.innerHTML = `
+                        <span>${section.title}</span>
+                        <span class="toc-arrow">▶</span>
+                    `;
+
+                    const subsDiv = document.createElement('div');
+                    subsDiv.className = 'toc-subs';
+
+                    section.subsections.forEach((subsection, subIndex) => {
+                        const subDiv = document.createElement('div');
+                        subDiv.className = 'toc-sub';
+                        subDiv.textContent = subsection.title;
+                        subDiv.onclick = () => scrollToSection(`${sectionIndex}-${subIndex}`);
+                        subsDiv.appendChild(subDiv);
+                    });
+
+                    mainDiv.onclick = (e) => {
+                        e.stopPropagation();
+                        const arrow = mainDiv.querySelector('.toc-arrow');
+                        arrow.classList.toggle('expanded');
+                        subsDiv.classList.toggle('expanded');
+                    };
+
+                    sectionDiv.appendChild(mainDiv);
+                    sectionDiv.appendChild(subsDiv);
+                } else {
+                    const mainDiv = document.createElement('div');
+                    mainDiv.className = 'toc-main';
+                    mainDiv.textContent = section.title;
+                    mainDiv.onclick = () => scrollToSection(sectionIndex.toString());
+                    sectionDiv.appendChild(mainDiv);
+                }
+
+                tocContainer.appendChild(sectionDiv);
+            });
+        }
+
+        function scrollToSection(id) {
+            const element = document.getElementById(`section-${id}`);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        document.getElementById('pdfUpload').addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file && file.type === 'application/pdf') {
+                processPDF(file);
+            }
+        });
+    </script>
+</body>
+</html>
