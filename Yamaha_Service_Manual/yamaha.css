@@ -1,0 +1,175 @@
+:root {
+    --nav-width: 360px;
+    --gap: 20px
+}
+
+html,body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.45;
+    background: #fff;
+    color: #111
+}
+ .contentcontainer{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    
+    
+    
+}
+.leftside{    
+    height: auto;
+    width: 20%;
+    padding: 10px;
+
+
+}
+.rightside{
+    margin: 0;
+    width: 100%;
+    height: auto;
+    /*display: flex;
+    justify-content: end;*/
+    
+}
+img {
+  /*display: block;*/
+  margin: auto;
+  width: 100%;
+  height: auto ;
+  border: 1px solid black;
+}
+/*.container {
+    display: flex;
+    min-height: 100vh
+}
+
+.content {
+    flex: 1;
+    padding: 28px 32px 48px 32px;
+    overflow: auto
+}*/
+
+nav {
+    width: var(--nav-width);
+    background: #f7f8fb;
+    border-left: 1px solid #e3e7ee;
+    padding: 18px;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: auto;
+    order: 2
+}
+
+nav h2 {
+    margin: 0 0 12px 0;
+    font-size: 18px
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+nav li {
+    margin: 6px 0
+}
+
+nav a {
+    color: #0b66b2;
+    text-decoration: none
+}
+
+nav a:hover {
+    text-decoration: underline
+}
+
+/* Click-to-toggle using checkbox */
+.collapsible {
+    margin: 6px 0
+}
+
+.collapsible input {
+    display: none
+}
+
+.collapsible label {
+    display: block;
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 4px
+}
+
+.collapsible label:after {
+    content: '▸';
+    float: right;
+    transition: transform .2s
+}
+
+.collapsible input:checked+label:after {
+    transform: rotate(90deg)
+}
+
+.collapsible .inner {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .25s ease
+}
+
+.collapsible input:checked+label+.inner {
+    max-height: 1000px;
+    padding-left: 8px;
+    margin-top: 6px
+}
+
+header {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 12px;
+    margin-bottom: 14px
+}
+
+h1 {
+    font-size: 22px;
+    margin: 6px 0
+}
+
+h2.chapter {
+    font-size: 20px;
+    margin-top: 28px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 6px
+}
+
+.page-img {
+    display: block;
+    max-width: 100%;
+    margin: 12px 0;
+    border: 1px solid #e6e6e6;
+    padding: 4px;
+    background: #fff
+}
+
+:target {
+    scroll-margin-top: 20px
+}
+
+@media(max-width:900px) {
+    nav {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-left: none;
+        border-top: 1px solid #eee
+    };
+
+    .container {
+        flex-direction: column
+    }
+}
