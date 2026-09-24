@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Méretvételi és Megrendelő lap</title>
+<style>
+:root{
+  --bg:#f5f6f4; --card:#ffffff; --ink:#1f2a24; --sub:#5b6b62;
+  --accent:#0f7a5c; --accent2:#0a5c45; --line:#d8ddd6; --point:#c94f3e; --pointset:#0f7a5c;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--bg:#141816; --card:#1c2320; --ink:#eef1ee; --sub:#9fb0a6; --line:#33403a;}
+}
+:root[data-theme="dark"]{--bg:#141816; --card:#1c2320; --ink:#eef1ee; --sub:#9fb0a6; --line:#33403a;}
+*{box-sizing:border-box;}
+html{scroll-padding-top:env(safe-area-inset-top,0px);}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+header{
+  padding:22px 20px 14px; text-align:center; border-bottom:3px solid var(--accent);
+  background:var(--card);
+}
+header h1{margin:0 0 2px; font-size:1.4rem; color:var(--accent2); letter-spacing:.3px;}
+header .brand{font-weight:700; color:var(--accent); font-size:1.6rem;}
+header .sub{color:var(--sub); font-size:.85rem;}
+.wrap{max-width:1000px; margin:20px auto; padding:0 16px 60px; display:grid; grid-template-columns:1.15fr 1fr; gap:18px;}
+@media (max-width:760px){.wrap{grid-template-columns:1fr;}}
+.card{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px 20px; box-shadow:0 1px 3px rgba(0,0,0,.06);}
+.card h2{margin:0 0 12px; font-size:1rem; color:var(--accent2); border-bottom:1px solid var(--line); padding-bottom:8px;}
+.field{margin-bottom:10px;}
+.field label{display:block; font-size:.78rem; color:var(--sub); margin-bottom:3px;}
+.field input[type=text], .field input[type=date], .field input[type=number], .field select, .field textarea{
+  width:100%; padding:7px 9px; border:1px solid var(--line); border-radius:7px;
+  background:transparent; color:var(--ink); font-size:.92rem; font-family:inherit;
+}
+.field textarea{resize:vertical; min-height:54px;}
+.row2{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
+.radios{display:flex; gap:16px; align-items:center; padding-top:4px;}
+.radios label{font-size:.9rem; color:var(--ink); display:flex; gap:5px; align-items:center;}
+.divider{border:none; border-top:1px dashed var(--line); margin:14px 0;}
+.diagram-card{position:sticky; top:10px; align-self:start;}
+.diagram-hint{font-size:.78rem; color:var(--sub); margin:-4px 0 10px;}
+svg{width:100%; height:auto; display:block;}
+.pt{cursor:pointer;}
+.pt circle{fill:var(--point); stroke:var(--card); stroke-width:2;}
+.pt.set circle{fill:var(--pointset);}
+.pt text{font-size:11px; fill:#fff; text-anchor:middle; dominant-baseline:middle; font-weight:600; pointer-events:none;}
+.pt-val{font-size:9px; fill:var(--ink); text-anchor:middle; font-weight:600;}
+.amp-line{stroke:var(--accent); stroke-width:2; stroke-dasharray:5 4;}
+.pt-editor{width:100%; height:100%; display:flex;}
+.pt-editor input{
+  width:100%; height:100%; box-sizing:border-box; border:1px solid var(--accent); border-radius:5px;
+  background:#ffffff; color:#000000; font-size:12px; text-align:center; padding:0 2px;
+}
+.legend{font-size:.75rem; color:var(--sub); margin-top:8px; line-height:1.5;}
+.btnbar{display:flex; gap:10px; margin-top:18px; grid-column:1 / -1;}
+button{
+  border:none; border-radius:8px; padding:10px 16px; font-size:.9rem; cursor:pointer;
+  background:var(--accent); color:#fff; font-weight:600;
+}
+button.secondary{background:transparent; color:var(--accent); border:1px solid var(--accent);}
+@media print{
+  .btnbar, .diagram-hint, .legend{display:none;}
+  body{background:#fff;}
+  .card{box-shadow:none; border:1px solid #888;}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">MediLend</div>
+  <h1>Méretvételi és Megrendelő lap</h1>
+  <div class="sub">Gyógyászati Segédeszközök gyártása és forgalmazása</div>
+</header>
+
+<div class="wrap">
+  <div class="card">
+    <h2>Megrendelő adatai</h2>
+    <div class="field"><label>Megrendelő</label><input type="text" id="megrendelo"></div>
+    <div class="field"><label>Cím</label><input type="text" id="cim"></div>
+    <div class="row2">
+      <div class="field"><label>Telefon</label><input type="text" id="telefon"></div>
+      <div class="field"><label>Születési idő</label><input type="date" id="szuletesi"></div>
+    </div>
+    <div class="row2">
+      <div class="field"><label>TAJ szám</label><input type="text" id="taj"></div>
+      <div class="field"><label>Kgy. szám</label><input type="text" id="kgyszam"></div>
+    </div>
+    <div class="row2">
+      <div class="field"><label>Kgy. érvényesség</label><input type="date" id="kgyerv"></div>
+      <div class="field"></div>
+    </div>
+    <div class="row2">
+      <div class="field"><label>Magasság (cm)</label><input type="number" id="magassag"></div>
+      <div class="field"><label>Testsúly (kg)</label><input type="number" id="testsuly"></div>
+    </div>
+
+    <hr class="divider">
+    <h2>Termék adatai</h2>
+    <div class="field">
+      <label>Termék megnevezése</label>
+      <select id="termek">
+        <option value="">– válasszon –</option>
+        <option value="L-211">L-211 (lábszár / térd alatti amputáció)</option>
+        <option value="L-602K">L-602/K (comb / térd feletti amputáció)</option>
+      </select>
+    </div>
+    <div class="field"><label>Tartozékai</label><input type="text" id="tartozekai"></div>
+    <div class="field"><label>Gyártási szám</label><input type="text" id="gyartasi"></div>
+    <div class="field">
+      <label>Oldaliság</label>
+      <div class="radios">
+        <label><input type="radio" name="oldal" value="jobb" checked> Jobb</label>
+        <label><input type="radio" name="oldal" value="bal"> Bal</label>
+      </div>
+    </div>
+    <div class="row2">
+      <div class="field"><label>BNO</label><input type="text" id="bno"></div>
+      <div class="field"><label>Felíró orvos</label><input type="text" id="orvos"></div>
+    </div>
+    <div class="field"><label>Intézmény</label><input type="text" id="intezmeny"></div>
+    <div class="row2">
+      <div class="field"><label>Vény dátuma</label><input type="date" id="venydat"></div>
+      <div class="field"><label>Vény átvétel dátuma</label><input type="date" id="venyatv"></div>
+    </div>
+    <div class="row2">
+      <div class="field"><label>Méretvétel dátuma</label><input type="date" id="meretdat"></div>
+      <div class="field"><label>Vény vonalkódja</label><input type="text" id="vonalkod"></div>
+    </div>
+    <div class="field"><label>Eszköz térítési költsége</label><input type="text" id="teritesi"></div>
+
+    <hr class="divider">
+    <div class="field"><label>Megjegyzés</label><textarea id="megjegyzes"></textarea></div>
+    <div class="row2">
+      <div class="field"><label>Gyártó</label><input type="text" id="gyarto"></div>
+      <div class="field"><label>Aláírás (név)</label><input type="text" id="alairas"></div>
+      <div class="field" style="grid-column:1 / -1;">
+  <label>Aláírás</label>
+  <canvas id="alairasCanvas" width="400" height="120"
+    style="border:1px solid var(--line); border-radius:7px; background:#fff; touch-action:none; width:100%; max-width:400px; display:block;"></canvas>
+  <button type="button" class="secondary" style="margin-top:6px; padding:4px 10px; font-size:.8rem;" onclick="clearSignature()">Aláírás törlése</button>
+</div>
+    </div>
+  </div>
+
+  <div class="card diagram-card">
+    <h2>Méretvételi pontok</h2>
+    <div class="diagram-hint">Válasszon terméket és oldaliságot, majd írja be a mért értékeket (cm) a pontok melletti mezőkbe.</div>
+    <svg id="figure" viewBox="0 0 300 700" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="150" cy="55" rx="32" ry="38" fill="none" stroke="var(--ink)" stroke-width="2"/>
+      <rect x="128" y="90" width="44" height="20" fill="none" stroke="var(--ink)" stroke-width="2"/>
+      <path d="M90,110 L210,110 L225,260 L75,260 Z" fill="none" stroke="var(--ink)" stroke-width="2"/>
+      <path d="M90,115 L40,260 L55,275 L100,145" fill="none" stroke="var(--ink)" stroke-width="2"/>
+      <path d="M210,115 L260,260 L245,275 L200,145" fill="none" stroke="var(--ink)" stroke-width="2"/>
+      <path d="M105,258 L95,520 L88,650 L72,650 L80,520 L92,258 Z" fill="none" stroke="var(--ink)" stroke-width="2"/>
+      <path d="M195,258 L205,520 L212,650 L228,650 L220,520 L208,258 Z" fill="none" stroke="var(--ink)" stroke-width="2"/>
+      <line x1="90" y1="520" x2="210" y2="520" stroke="var(--line)" stroke-width="1" stroke-dasharray="2 3"/>
+      <g id="points"></g>
+    </svg>
+    <div class="legend" id="legend">Válasszon terméket a méretvételi pontok megjelenítéséhez.</div>
+  </div>
+
+  <div class="btnbar">
+    <button onclick="window.print()">Nyomtatás</button>
+    <button class="secondary" onclick="resetForm()">Törlés / Új lap</button>
+  </div>
+</div>
+
+<script>
+const termekSel = document.getElementById('termek');
+const pointsG = document.getElementById('points');
+const legend = document.getElementById('legend');
+let values = {};
+
+function oldalirany(){
+  return document.querySelector('input[name=oldal]:checked').value;
+}
+
+// Leg x-centers on the diagram (viewer's left = image-left leg, viewer's right = image-right leg)
+// Jobb (patient's right) drawn as image-right leg; Bal as image-left leg.
+function legCenters(side){
+  return side === 'jobb'
+    ? {top:200, bottom:220, kneeY:520}   // right leg on image
+    : {top:100, bottom:80,  kneeY:520};  // left leg on image
+}
+
+function buildPoints(){
+  pointsG.innerHTML = '';
+  values = {};
+  const termek = termekSel.value;
+  const side = oldalirany();
+  if(!termek){ legend.textContent = 'Válasszon terméket a méretvételi pontok megjelenítéséhez.'; return; }
+
+  const {top, bottom} = legCenters(side);
+  let ys, label;
+  if(termek === 'L-211'){ // térd alatt (calf zone)
+    ys = [540,565,590,615,640];
+    label = 'Térd alatti (lábszár) méretvételi pontok, felülről lefelé sorszámozva.';
+  } else { // L-602K, térd felett (thigh zone)
+    ys = [395,430,465,495,515];
+    label = 'Térd feletti (comb) méretvételi pontok, felülről lefelé sorszámozva.';
+  }
+  legend.textContent = label + ' (' + (side==='jobb'?'Jobb':'Bal') + ' oldal)';
+
+  ys.forEach((y,i)=>{
+    const x = top + (bottom-top) * (i/(ys.length-1));
+    const g = document.createElementNS('http://www.w3.org/2000/svg','g');
+    g.setAttribute('class','pt');
+    g.setAttribute('data-id','p'+i);
+    g.innerHTML = `<circle cx="${x}" cy="${y}" r="10"></circle><text x="${x}" y="${y}">${i+1}</text>`;
+    pointsG.appendChild(g);
+    addEditor(x, y, i);
+  });
+}
+
+function addEditor(cx, cy, i){
+  const fo = document.createElementNS('http://www.w3.org/2000/svg','foreignObject');
+  fo.setAttribute('x', cx + 13);
+  fo.setAttribute('y', cy - 9);
+  fo.setAttribute('width', 50);
+  fo.setAttribute('height', 18);
+  fo.innerHTML = `<div xmlns="http://www.w3.org/1999/xhtml" class="pt-editor">
+      <input type="text" inputmode="decimal" placeholder="cm">
+    </div>`;
+  pointsG.appendChild(fo);
+  const input = fo.querySelector('input');
+  input.addEventListener('input', ()=>{
+    const v = input.value.trim();
+    if(v === '') delete values['p'+i]; else values['p'+i] = v;
+  });
+}
+
+termekSel.addEventListener('change', buildPoints);
+document.querySelectorAll('input[name=oldal]').forEach(r=>r.addEventListener('change', buildPoints));
+
+function resetForm(){
+  if(!confirm('Biztosan törli az összes megadott adatot?')) return;
+  document.querySelectorAll('input[type=text],input[type=date],input[type=number],textarea').forEach(el=>el.value='');
+  termekSel.value = '';
+  document.querySelector('input[name=oldal][value=jobb]').checked = true;
+  buildPoints();
+}
+const sigCanvas = document.getElementById('alairasCanvas');
+const sigCtx = sigCanvas.getContext('2d');
+sigCtx.strokeStyle = '#000';
+sigCtx.lineWidth = 2;
+sigCtx.lineCap = 'round';
+let drawing = false;
+
+function getPos(e){
+  const rect = sigCanvas.getBoundingClientRect();
+  const scaleX = sigCanvas.width / rect.width;
+  const scaleY = sigCanvas.height / rect.height;
+  const x = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
+  const y = (e.touches ? e.touches[0].clientY : e.clientY) - rect.top;
+  return { x: x * scaleX, y: y * scaleY };
+}
+
+function startDraw(e){
+  drawing = true;
+  const p = getPos(e);
+  sigCtx.beginPath();
+  sigCtx.moveTo(p.x, p.y);
+  e.preventDefault();
+}
+function draw(e){
+  if(!drawing) return;
+  const p = getPos(e);
+  sigCtx.lineTo(p.x, p.y);
+  sigCtx.stroke();
+  e.preventDefault();
+}
+function endDraw(){ drawing = false; }
+
+sigCanvas.addEventListener('mousedown', startDraw);
+sigCanvas.addEventListener('mousemove', draw);
+sigCanvas.addEventListener('mouseup', endDraw);
+sigCanvas.addEventListener('mouseleave', endDraw);
+sigCanvas.addEventListener('touchstart', startDraw);
+sigCanvas.addEventListener('touchmove', draw);
+sigCanvas.addEventListener('touchend', endDraw);
+
+function clearSignature(){
+  sigCtx.clearRect(0, 0, sigCanvas.width, sigCanvas.height);
+}
+</script>
+</body>
+</html>
